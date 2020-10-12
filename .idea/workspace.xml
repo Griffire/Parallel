@@ -2,11 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f72c4ef6-e4f1-495c-82fb-45bbb3dcf740" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/first_lab/target/classes/myself/WordCountApp.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/first_lab/target/classes/myself/WordMapper.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/first_lab/target/classes/myself/WordReducer.class" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/first_lab/target/hadoop-examples-1.0-SNAPSHOT.jar" beforeDir="false" afterPath="$PROJECT_DIR$/first_lab/target/hadoop-examples-1.0-SNAPSHOT.jar" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/first_lab/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" beforeDir="false" afterPath="$PROJECT_DIR$/first_lab/target/maven-status/maven-compiler-plugin/compile/default-compile/createdFiles.lst" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first_lab/src/main/java/lab2/TestGitWatch.txt" beforeDir="false" afterPath="$PROJECT_DIR$/first_lab/src/main/java/lab2/TestGitWatch.txt" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -61,7 +57,11 @@
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/first_lab/src/main/java/lab2/TestGitWatch.txt">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state>
+              <caret column="4" lean-forward="true" selection-start-column="4" selection-end-column="4" />
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -84,6 +84,7 @@
         <option value="$PROJECT_DIR$/first_lab/src/main/java/lab1/WordMapper.java" />
         <option value="$PROJECT_DIR$/first_lab/src/main/java/lab1/WordCountApp.java" />
         <option value="$PROJECT_DIR$/first_lab/src/main/java/lab1/WordReducer.java" />
+        <option value="$PROJECT_DIR$/first_lab/src/main/java/lab2/TestGitWatch.txt" />
       </list>
     </option>
   </component>
@@ -290,7 +291,11 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/first_lab/src/main/java/lab2/TestGitWatch.txt">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state>
+          <caret column="4" lean-forward="true" selection-start-column="4" selection-end-column="4" />
+        </state>
+      </provider>
     </entry>
   </component>
 </project>
