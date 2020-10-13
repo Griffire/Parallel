@@ -15,7 +15,9 @@ public class AirportMapper extends Mapper<LongWritable, Text, Text, FloatWritabl
         String line = value.toString();
         String [] words = line.split("[ , ]");
         if (words[0] != "YEAR") {
-            context.write(new Text(words[13]), new FloatWritable(Float.parseFloat(words[17])));
+            context.write(new Text(words[13]), new FloatWritable(Float.parseFloat("103")));
+
+            //context.write(new Text(words[13]), new FloatWritable(Float.parseFloat(words[17])));
         }
 //        for (String word : words) {
 //            context.write(new Text(word), new IntWritable(1));
