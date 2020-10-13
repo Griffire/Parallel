@@ -14,7 +14,7 @@ public class AirportMapper extends Mapper<LongWritable, Text, Text, IntWritable>
             InterruptedException {
         String line = value.toString();
         String [] words = line.split("[ , ]");
-        context.write(new Text(words[7]),new IntWritable(1));
+        context.write(new Text(words[9]),new IntWritable(1));
 //        for (String word : words) {
 //            context.write(new Text(word), new IntWritable(1));
 //        }
