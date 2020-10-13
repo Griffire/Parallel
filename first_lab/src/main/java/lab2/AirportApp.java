@@ -18,7 +18,7 @@ public class AirportApp {
         }
 
         Job job = Job.getInstance();
-        job.setJarByClass(WordCountApp.class);
+        job.setJarByClass(AirportApp.class);
         job.setJobName("Word count");
         FileInputFormat.addInputPath(job, new Path(args[0]));
         FileOutputFormat.setOutputPath(job, new Path(args[1]));
