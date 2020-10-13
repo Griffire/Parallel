@@ -14,7 +14,7 @@ public class AirportReducer extends Reducer<Text, FloatWritable, Text, LongWrita
         long count=0;
         float average = (float) 0.0;
         for (FloatWritable v : values) {
-            average = average * count + (float)v;
+            average = average * count + get(v);
             count++;
             average /= count;
         }
