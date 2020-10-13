@@ -9,12 +9,15 @@ import java.io.IOException;
 
 public class AirportReducer extends Reducer<Text, IntWritable, Text, LongWritable> {
     @Override
-    protected void reduce(Text key, Iterable<IntWritable> values, Context context) throws
+    protected void reduce(Text key, Iterable<FloatWritable> values, Context context) throws
             IOException, InterruptedException {
         long count=0;
+        float average = 0.0
         for (IntWritable v : values) {
+            average = average * count + v;
             count++;
+            average /= count;
         }
-        context.write(key, new LongWritable(count));
+        context.write(key, new FloatWritable(average));
     }
 }
