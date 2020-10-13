@@ -14,7 +14,7 @@ public class AirportMapper extends Mapper<LongWritable, Text, Text, FloatWritabl
             InterruptedException {
         String line = value.toString();
         String [] words = line.split("[ , ]");
-        if (words[14] != "YEAR") {
+        if (words[14] != "ORIGIN_CITY_MARKET_ID") {
             context.write(new Text(words[14]), new FloatWritable(Float.parseFloat("103")));
 
             //context.write(new Text(words[13]), new FloatWritable(Float.parseFloat(words[17])));
