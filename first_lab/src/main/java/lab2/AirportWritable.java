@@ -7,13 +7,13 @@ import java.io.IOException;
 import java.util.Objects;
 
 public class AirportWritable implements Writable<AirportWritable>{
-    private int YEAR, QUARTER, MONTH , DAY_OF_MONTH   ;
+//    private int YEAR, QUARTER, MONTH , DAY_OF_MONTH   ;
     private long timestamp;
 
-    public void write(DataOutput out) throws IOException {
-        out.writeInt(counter);
-        out.writeLong(timestamp);
-    }
+//    public void write(DataOutput out) throws IOException {
+//        out.writeInt(counter);
+//        out.writeLong(timestamp);
+//    }
 
 
 
