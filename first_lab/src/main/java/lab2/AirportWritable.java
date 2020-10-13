@@ -1,4 +1,4 @@
-package lab2;
+package lab3;
 
 import org.apache.hadoop.io.*;
 import java.io.DataInput;
