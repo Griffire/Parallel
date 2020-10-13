@@ -13,7 +13,7 @@ public class AirportReducer extends Reducer<Text, FloatWritable, Text, LongWrita
             IOException, InterruptedException {
         long count=0;
         float average = (float) 0.0;
-        for (IntWritable v : values) {
+        for (FloatWritable v : values) {
             average = average * count + v;
             count++;
             average /= count;
