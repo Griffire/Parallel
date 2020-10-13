@@ -16,7 +16,7 @@ public class AirportReducer extends Reducer<Text, FloatWritable, Text, LongWrita
         for (FloatWritable v : values) {
             average = average * count + v.get();
             count++;
-            average /= count;
+            average /= (float)count;
         }
         context.write(key, new FloatWritable(average));
     }
