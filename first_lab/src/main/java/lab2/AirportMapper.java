@@ -16,10 +16,10 @@ public class AirportMapper extends Mapper<LongWritable, Text, Text, FloatWritabl
         String [] words = line.split("[ , ]");
 //        if (!words[14].equals("DEST_AIRPORT_ID")) {
         if (words[14].length() < 7) {
-            context.write(new Text(words[14]), new FloatWritable(Float.parseFloat("0.3")));
-            //context.write(new Text(words[13]), new FloatWritable(Float.parseFloat(words[17])));
+//            context.write(new Text(words[14]), new FloatWritable(Float.parseFloat("0.3")));
+            context.write(new Text(words[13]), new FloatWritable(Float.parseFloat(words[17])));
         } else {
-            context.write(new Text("error"), new FloatWritable(Float.parseFloat("4.04")));
+//            context.write(new Text("error"), new FloatWritable(Float.parseFloat("4.04")));
 
         }
 //        for (String word : words) {
