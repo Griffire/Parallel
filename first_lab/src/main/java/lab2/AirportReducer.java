@@ -27,7 +27,7 @@ public class AirportReducer extends Reducer<Text, FloatWritable, Text, FloatWrit
             }
         }
 //        context.write(key, new FloatWritable(average));
-        context.write(key, new Text("av" + average + " " + ));
+        context.write(key, new Text("average: " + average + " max: " + max + " min: " + min ));
 
     }
 }
