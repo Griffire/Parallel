@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="f72c4ef6-e4f1-495c-82fb-45bbb3dcf740" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/first_lab/src/main/java/lab2/AirportWritableComparable.java" beforeDir="false" afterPath="$PROJECT_DIR$/first_lab/src/main/java/lab2/AirportWritableComparable.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/first_lab/src/main/java/lab2/GroupingComparator.java" beforeDir="false" afterPath="$PROJECT_DIR$/first_lab/src/main/java/lab2/GroupingComparator.java" afterDir="false" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
@@ -40,7 +40,7 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/first_lab/src/main/java/lab2/AirportWritableComparable.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="495">
+            <state relative-caret-position="630">
               <caret line="35" column="9" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
               <folding>
                 <element signature="imports" expanded="true" />
@@ -51,7 +51,16 @@
       </file>
       <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/first_lab/src/main/java/lab2/GroupingComparator.java">
-          <provider selected="true" editor-type-id="text-editor" />
+          <provider selected="true" editor-type-id="text-editor">
+            <state relative-caret-position="30">
+              <caret line="2" selection-start-line="2" selection-end-line="2" />
+              <folding>
+                <element signature="imports" expanded="true" />
+                <element signature="e#187#188#0" expanded="true" />
+                <element signature="e#231#232#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -132,6 +141,7 @@
         <option value="$PROJECT_DIR$/first_lab/src/main/java/lab2/AirportMapper.java" />
         <option value="$PROJECT_DIR$/first_lab/src/main/java/lab2/AirportReducer.java" />
         <option value="$PROJECT_DIR$/first_lab/src/main/java/lab2/AirportWritableComparable.java" />
+        <option value="$PROJECT_DIR$/first_lab/src/main/java/lab2/GroupingComparator.java" />
       </list>
     </option>
   </component>
@@ -403,7 +413,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/first_lab/src/main/java/lab2/AirportWritableComparable.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="495">
+        <state relative-caret-position="630">
           <caret line="35" column="9" selection-start-line="35" selection-start-column="9" selection-end-line="35" selection-end-column="9" />
           <folding>
             <element signature="imports" expanded="true" />
@@ -412,7 +422,16 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/first_lab/src/main/java/lab2/GroupingComparator.java">
-      <provider selected="true" editor-type-id="text-editor" />
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="30">
+          <caret line="2" selection-start-line="2" selection-end-line="2" />
+          <folding>
+            <element signature="imports" expanded="true" />
+            <element signature="e#187#188#0" expanded="true" />
+            <element signature="e#231#232#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
     </entry>
   </component>
   <component name="masterDetails">
