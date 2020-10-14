@@ -28,8 +28,8 @@ public class AirportWritableComparable implements WritableComparable {
     }
 
     public void readFields(DataInput in) throws IOException {
-        name = in.readString();
-        code = in.readString();
+        name = in.readBytes();
+        code = in.readBytes();
     }
 
     public int compareTo(AirportWritableComparable o) {
