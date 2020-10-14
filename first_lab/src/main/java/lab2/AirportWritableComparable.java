@@ -3,7 +3,8 @@ package lab2;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.io.FloatWritable;
 import org.apache.hadoop.io.LongWritable;
-import org.apache.hadoop.io.WritableCombarable;
+import org.apache.hadoop.io.WritableComparable;
+
 public class AirportWritableComparable implements WritableComparable {
     // Some data
     private String name;
