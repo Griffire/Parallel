@@ -34,11 +34,11 @@ public class AirportWritableComparable implements WritableComparable {
 //        return (thisValue < thatValue ? -1 : (thisValue==thatValue ? 0 : 1));
     }
 
-    public int hashCode() {
-        final int prime = 31;
-        int result = 1;
-        result = prime * result + name;//  !
-        result = prime * result + (int) (timestamp ^ (timestamp >>> 32));
-        return result
-    }
+//    public int hashCode() {
+//        final int prime = 31;
+//        int result = 1;
+//        result = prime * result + name;//  !
+//        result = prime * result + (int) (timestamp ^ (timestamp >>> 32));
+//        return result
+//    }
 }
