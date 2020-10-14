@@ -6,29 +6,38 @@ import org.apache.hadoop.io.LongWritable;
 
 public class AirportWritableComparable implements WritableComparable {
     // Some data
-    private string;
-    private long timestamp;
+    private String name;
+    private String code;
+
+    public AirportWritableComparable(){
+    }
+
+    public AirportWritableComparable(String name , String code){
+        this.name = name;
+        this.code = code;
+    }
 
     public void write(DataOutput out) throws IOException {
-        out.writeInt(counter);
-        out.writeLong(timestamp);
+        out.writeString(name);
+        out.writeString(code);
     }
 
     public void readFields(DataInput in) throws IOException {
-        counter = in.readInt();
-        timestamp = in.readLong();
+        name = in.readString();
+        code = in.readString();
     }
 
     public int compareTo(MyWritableComparable o) {
-        int thisValue = this.value;
-        int thatValue = o.value;
-        return (thisValue < thatValue ? -1 : (thisValue==thatValue ? 0 : 1));
+        return this.name.compareTo(o.name);
+//        int thisValue = this.value;
+//        int thatValue = o.value;
+//        return (thisValue < thatValue ? -1 : (thisValue==thatValue ? 0 : 1));
     }
 
     public int hashCode() {
         final int prime = 31;
         int result = 1;
-        result = prime * result + counter;
+        result = prime * result + name;//  !
         result = prime * result + (int) (timestamp ^ (timestamp >>> 32));
         return result
     }
