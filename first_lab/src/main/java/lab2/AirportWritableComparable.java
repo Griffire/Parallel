@@ -6,7 +6,7 @@ import org.apache.hadoop.io.LongWritable;
 
 public class AirportWritableComparable implements WritableComparable {
     // Some data
-    private ;
+    private string;
     private long timestamp;
 
     public void write(DataOutput out) throws IOException {
