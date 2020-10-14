@@ -16,7 +16,7 @@ public class AirportReducer extends Reducer<Text, FloatWritable, Text,Text> {
         float min = Float.MAX_VALUE;
         float max = (float)(-1.0) * Float.MAX_VALUE;
         for (FloatWritable v : values) {
-            auto i = Float.parseFloat(v.get)();
+            auto i = Float.parseFloat(v.get());
             average = average * count + i;
             count++;
             average /= (float)count;
