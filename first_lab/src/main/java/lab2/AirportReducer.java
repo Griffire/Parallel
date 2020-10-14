@@ -19,7 +19,15 @@ public class AirportReducer extends Reducer<Text, FloatWritable, Text, FloatWrit
             average = average * count + v.get();
             count++;
             average /= (float)count;
+            if (v.get()) > max{
+                max = v.get();
+            }
+            if (v.get()) < min{
+                min = v.get();
+            }
         }
-        context.write(key, new FloatWritable(average));
+//        context.write(key, new FloatWritable(average));
+        context.write(key, new Text("av" + average + " " + ));
+
     }
 }
