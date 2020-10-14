@@ -14,18 +14,7 @@ public class AirportNameMapper extends Mapper<AirportWritableComparable, Text, T
             InterruptedException {
         String line = value.toString();
         String [] words = line.split("[ , ]");
-//        if (!words[14].equals("DEST_AIRPORT_ID")) {
-        if (words[14].length() < 7 && words[17].length() > 0) {
-//            context.write(new Text(words[17]), new FloatWritable(Float.parseFloat("0.3")));
-            // context.write(new Text(words[14]), new FloatWritable(Float.parseFloat(words[17])));
-            context.write(new AirportWritableComparable(words[14],"1"), new Text(words[17]));
-        } else {
-//            context.write(new Text("error"), new FloatWritable(Float.parseFloat("4.04")));
-
-        }
-//        for (String word : words) {
-//            context.write(new Text(word), new IntWritable(1));
-//        }
+        context.write(new AirportWritableComparable(words[0],"0"), new Text(words[1]));
 
     }
 }

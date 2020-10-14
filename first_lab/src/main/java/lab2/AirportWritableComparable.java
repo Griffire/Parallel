@@ -40,6 +40,10 @@ public class AirportWritableComparable implements WritableComparable {
         return name;
     }
 
+    public String getCode() {
+        return code;
+    }
+
     //    public int hashCode() {
 //        final int prime = 31;
 //        int result = 1;

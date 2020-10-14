@@ -15,20 +15,25 @@ public class AirportReducer extends Reducer<AirportWritableComparable, Text, Tex
         float average = (float) 0.0;
         float min = Float.MAX_VALUE;
         float max = (float)(-1.0) * Float.MAX_VALUE;
-        for (AirportWritableComparable v : values) {
-            float i = Float.parseFloat(v.getName());
-            average = average * count + i;
-            count++;
-            average /= (float)count;
-            if (i > max){
-                max = i;
-            }
-            if (i < min){
-                min = i;
+        String name = "";
+        for (Text v : values) {
+            if (key.getCode() == "1") {
+                float i = Float.parseFloat(v.toString());
+                average = average * count + i;
+                count++;
+                average /= (float) count;
+                if (i > max) {
+                    max = i;
+                }
+                if (i < min) {
+                    min = i;
+                }
+            } else {
+                name = key.getName();
             }
         }
 //        context.write(key, new FloatWritable(average));
-        context.write(key.getName(), new Text("average: " + average + " max: " + max + " min: " + min ));
+        context.write(key.getName(), new Text("Name:  "+ name + " average: " + average + " max: " + max + " min: " + min ));
 
     }
 }
