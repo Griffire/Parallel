@@ -22,7 +22,7 @@ public class AirportApp {
         job.setJobName("Word count");
         FileInputFormat.addInputPath(job, new Path(args[0]));
         FileOutputFormat.setOutputPath(job, new Path(args[1]));
-        job.setMapperClass(AirportMapper.class);
+        job.setMapperClass(AirportNameMapper.class);
         job.setReducerClass(AirportReducer.class);
         job.setOutputKeyClass(AirportWritableComparable.class);
         job.setOutputValueClass(Text.class);
