@@ -32,4 +32,4 @@ public class AirportWritableComparable implements WritableComparable {
         result = prime * result + (int) (timestamp ^ (timestamp >>> 32));
         return result
     }
-}
+}Smart completion
