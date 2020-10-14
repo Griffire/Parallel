@@ -32,7 +32,7 @@ public class AirportWritableComparable implements WritableComparable {
         code = in.readString();
     }
 
-    public int compareTo(MyWritableComparable o) {
+    public int compareTo(AirportWritableComparable o) {
         int r1 =  this.name.compareTo(o.name);
         if (r1 == 0){
             return this.code.compareTo(o.code);
