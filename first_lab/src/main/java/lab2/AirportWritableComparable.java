@@ -28,10 +28,12 @@ public class AirportWritableComparable implements WritableComparable {
     }
 
     public int compareTo(MyWritableComparable o) {
-        return this.name.compareTo(o.name);
-//        int thisValue = this.value;
-//        int thatValue = o.value;
-//        return (thisValue < thatValue ? -1 : (thisValue==thatValue ? 0 : 1));
+        int r1 =  this.name.compareTo(o.name);
+        if (r1 == 0){
+            return this.code.compareTo(o.code);
+        } else {
+            return r1;
+        }
     }
 
 //    public int hashCode() {
