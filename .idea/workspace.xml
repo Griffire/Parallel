@@ -99,7 +99,7 @@
         <entry file="file://$PROJECT_DIR$/first_lab/src/main/java/lab1/WordMapper.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="135">
-              <caret line="14" column="32" lean-forward="true" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="42" />
+              <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -108,7 +108,7 @@
         <entry file="file://$PROJECT_DIR$/first_lab/src/main/java/lab2/AirportMapper.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="345">
-              <caret line="23" column="81" lean-forward="true" selection-start-line="23" selection-start-column="65" selection-end-line="23" selection-end-column="81" />
+              <caret line="23" column="81" selection-start-line="23" selection-start-column="65" selection-end-line="23" selection-end-column="81" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -361,7 +361,7 @@
     <entry file="file://$PROJECT_DIR$/first_lab/src/main/java/lab1/WordMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
-          <caret line="14" column="32" lean-forward="true" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="42" />
+          <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="42" />
         </state>
       </provider>
     </entry>
@@ -392,7 +392,7 @@
     <entry file="file://$PROJECT_DIR$/first_lab/src/main/java/lab2/AirportMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="345">
-          <caret line="23" column="81" lean-forward="true" selection-start-line="23" selection-start-column="65" selection-end-line="23" selection-end-column="81" />
+          <caret line="23" column="81" selection-start-line="23" selection-start-column="65" selection-end-line="23" selection-end-column="81" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -476,7 +476,6 @@
             <option name="proportions">
               <list>
                 <option value="0.2" />
-                <option value="0.6" />
               </list>
             </option>
           </splitter-proportions>
