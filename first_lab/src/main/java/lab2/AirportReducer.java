@@ -7,7 +7,7 @@ import org.apache.hadoop.io.LongWritable;
 
 import java.io.IOException;
 
-public class AirportReducer extends Reducer<Text, FloatWritable, Text,Text> {
+public class AirportReducer extends Reducer<Text, Text, Text,Text> {
     @Override
     protected void reduce(Text key, Iterable<Text> values, Context context) throws
             IOException, InterruptedException {
