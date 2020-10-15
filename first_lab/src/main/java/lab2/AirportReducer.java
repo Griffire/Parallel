@@ -21,25 +21,19 @@ public class AirportReducer extends Reducer<AirportWritableComparable, Text, Tex
         String name = v.next().toString();
 
         while (v.hasNext()){
-        //for (Text v : values) {
-
-           // if (key.getCode().charAt(0) == '1') {
-                float i = Float.parseFloat(v.next().toString());
-                average = average * count + i;
-                count++;
-                average /= (float) count;
-                if (i > max) {
-                    max = i;
-                }
-                if (i < min) {
-                    min = i;
-                }
-//            } else {
-//                name = v.toString();
+            float i = Float.parseFloat(v.next().toString());
+            average = average * count + i;
+            count++;
+            average /= (float) count;
+            if (i > max) {
+                max = i;
             }
-//        }
+            if (i < min) {
+                min = i;
+            }
+        }
         if (count > 0) {
-            context.write(new Text(key.getCode() + "__" + key.getName()), new Text(" Name:  " + name + " average: " + average + " max: " + max + " min: " + min));
+            context.write(new Text(key.getName()), new Text(" Name:  " + name + " average: " + average + " max: " + max + " min: " + min));
         }
     }
 }
