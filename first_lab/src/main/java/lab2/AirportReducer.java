@@ -18,7 +18,7 @@ public class AirportReducer extends Reducer<AirportWritableComparable, Text, Tex
         float average = (float) 0.0;
         float min = Float.MAX_VALUE;
         float max = (float)(-1.0) * Float.MAX_VALUE;
-        String name = v.iterNext().toString();
+        String name = v.next().toString();
 
         while (v.hasNext()){
         //for (Text v : values) {
