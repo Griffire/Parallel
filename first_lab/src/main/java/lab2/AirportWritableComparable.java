@@ -9,7 +9,7 @@ import org.apache.hadoop.io.FloatWritable;
 import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.WritableComparable;
 
-public class AirportWritableComparable implements WritableComparable {
+public class AirportWritableComparable implements WritableComparable<AirportWritableComparable> {
     // Some data
     private String name;
     private String code;
@@ -49,11 +49,11 @@ public class AirportWritableComparable implements WritableComparable {
         return code;
     }
 
-    //    public int hashCode() {
+//        public int hashCode() {
 //        final int prime = 31;
 //        int result = 1;
-//        result = prime * result + name;//  !
+//        result = prime * result ;//  !
 //        result = prime * result + (int) (timestamp ^ (timestamp >>> 32));
-//        return result
+//        return result;
 //    }
 }

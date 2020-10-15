@@ -9,8 +9,8 @@ public class GroupingComparator extends WritableComparator {
         super(AirportWritableComparable.class, true);
     }
 
-    @Override
-    public int compare(WritableComparable w1, WritableComparable w2) {
+
+    public int compare(AirportWritableComparable w1, AirportWritableComparable w2) {
         return w1.getName().compareTo(w2.getName());
     }
 }
