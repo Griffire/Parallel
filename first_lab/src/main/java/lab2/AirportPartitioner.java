@@ -3,6 +3,9 @@ package lab2;
 import org.apache.hadoop.io.Text;
 import org.apache.hadoop.mapreduce.Partitioner;
 
+import org.apache.hadoop.io.WritableComparable;
+
+
 public class AirportPartitioner extends Partitioner<WritableComparable, Text> {
 
     @Override
