@@ -5,9 +5,9 @@ import org.apache.hadoop.io.WritableComparable;
 import org.apache.hadoop.io.WritableComparator;
 
 public class GroupComparator extends WritableComparator {
-    protected GroupComparator() {
+   // protected GroupComparator() {
 //        super(AirportWritableComparable.class, true);
-    }
+  //  }
 
 
     public int compare(WritableComparable w1, WritableComparable w2) {
