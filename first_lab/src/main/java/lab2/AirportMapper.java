@@ -13,7 +13,7 @@ public class AirportMapper extends Mapper<LongWritable, Text, AirportWritableCom
     protected void map(LongWritable key, Text value, Context context) throws IOException,
             InterruptedException {
         String line = value.toString();
-        String [] words = line.split("[ ,\"]");
+        String [] words = line.split("[ ,]");
 //        if (!words[14].equals("DEST_AIRPORT_ID")) {
         if (words[14].length() < 7 && words[17].length() > 0) {
 //            context.write(new Text(words[17]), new FloatWritable(Float.parseFloat("0.3")));
