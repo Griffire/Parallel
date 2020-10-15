@@ -34,7 +34,7 @@ public class AirportReducer extends Reducer<AirportWritableComparable, Text, Tex
             }
         }
 //        context.write(key, new FloatWritable(average));
-        context.write(new Text(key.getName() + "__"+key.getCode()), new Text("Name:  "+ name + " average: " + average + " max: " + max + " min: " + min ));
+        context.write(new Text(key.getName() + "__" + count), new Text("Name:  "+ name + " average: " + average + " max: " + max + " min: " + min ));
 
     }
 }
