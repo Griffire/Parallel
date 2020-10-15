@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f72c4ef6-e4f1-495c-82fb-45bbb3dcf740" name="Default Changelist" comment="" />
+    <list default="true" id="f72c4ef6-e4f1-495c-82fb-45bbb3dcf740" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/first_lab/src/main/java/lab2/AirportNameMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/first_lab/src/main/java/lab2/AirportNameMapper.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -121,7 +123,7 @@
         <entry file="file://$PROJECT_DIR$/first_lab/src/main/java/lab2/AirportNameMapper.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="240">
-              <caret line="16" column="95" selection-start-line="16" selection-start-column="95" selection-end-line="16" selection-end-column="95" />
+              <caret line="16" column="93" selection-start-line="16" selection-start-column="93" selection-end-line="16" selection-end-column="93" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -157,8 +159,8 @@
         <option value="$PROJECT_DIR$/first_lab/src/main/java/lab2/GroupComparator.java" />
         <option value="$PROJECT_DIR$/first_lab/src/main/java/lab2/AirportPartitioner.java" />
         <option value="$PROJECT_DIR$/first_lab/src/main/java/lab2/AirportWritableComparable.java" />
-        <option value="$PROJECT_DIR$/first_lab/src/main/java/lab2/AirportNameMapper.java" />
         <option value="$PROJECT_DIR$/first_lab/src/main/java/lab2/AirportReducer.java" />
+        <option value="$PROJECT_DIR$/first_lab/src/main/java/lab2/AirportNameMapper.java" />
       </list>
     </option>
   </component>
@@ -482,7 +484,7 @@
     <entry file="file://$PROJECT_DIR$/first_lab/src/main/java/lab2/AirportNameMapper.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="240">
-          <caret line="16" column="95" selection-start-line="16" selection-start-column="95" selection-end-line="16" selection-end-column="95" />
+          <caret line="16" column="93" selection-start-line="16" selection-start-column="93" selection-end-line="16" selection-end-column="93" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
