@@ -1,8 +1,8 @@
 /Users/alexone/Parallel/first_lab/src/main/java/lab1/WordReducer.java
 /Users/alexone/Parallel/first_lab/src/main/java/lab2/AirportApp.java
 /Users/alexone/Parallel/first_lab/src/main/java/lab2/AirportNameMapper.java
+/Users/alexone/Parallel/first_lab/src/main/java/lab2/GroupComparator.java
 /Users/alexone/Parallel/first_lab/src/main/java/lab2/AirportWritableComparable.java
-/Users/alexone/Parallel/first_lab/src/main/java/lab2/GroupingComparator.java
 /Users/alexone/Parallel/first_lab/src/main/java/lab2/AirportReducer.java
 /Users/alexone/Parallel/first_lab/src/main/java/lab2/AirportMapper.java
 /Users/alexone/Parallel/first_lab/src/main/java/lab2/AirportPartitioner.java
