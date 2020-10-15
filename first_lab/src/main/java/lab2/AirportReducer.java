@@ -24,7 +24,7 @@ public class AirportReducer extends Reducer<AirportWritableComparable, Text, Tex
         //for (Text v : values) {
 
            // if (key.getCode().charAt(0) == '1') {
-                float i = Float.parseFloat(v.next.toString());
+                float i = Float.parseFloat(v.next().toString());
                 average = average * count + i;
                 count++;
                 average /= (float) count;
