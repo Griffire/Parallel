@@ -10,7 +10,7 @@ import java.io.IOException;
 
 public class AirportNameMapper extends Mapper<LongWritable, Text, AirportWritableComparable, Text> {
     @Override
-    protected void map(AirportWritableComparable key, Text value, Context context) throws IOException,
+    protected void map(LongWritable key, Text value, Context context) throws IOException,
             InterruptedException {
         String line = value.toString();
         String [] words = line.split("[ , ]");
