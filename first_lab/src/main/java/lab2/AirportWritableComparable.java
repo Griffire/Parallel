@@ -10,15 +10,14 @@ import org.apache.hadoop.io.LongWritable;
 import org.apache.hadoop.io.WritableComparable;
 
 public class AirportWritableComparable implements WritableComparable<AirportWritableComparable> {
-    // Some data
     private String name;
     private String code;
 
     public AirportWritableComparable(){
+        super();
     }
 
     public AirportWritableComparable(String name , String code){
-//        super();
         this.name = name;
         this.code = code;
     }
