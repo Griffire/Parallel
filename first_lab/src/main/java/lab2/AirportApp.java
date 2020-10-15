@@ -24,10 +24,10 @@ public class AirportApp {
         MultipleInputs.addInputPath(job, new Path(args[1]) , TextInputFormat.class , AirportNameMapper.class);
         FileOutputFormat.setOutputPath(job, new Path(args[2]));
 
-        
+
         job.setPartitionerClass(AirportPartitioner.class);
         job.setReducerClass(AirportReducer.class);
-        job.setGroupingComparatorClass(GroupComparator.class)
+        job.setGroupingComparatorClass(GroupComparator.class);
         //FileInputFormat.addInputPath(job, new Path(args[0]));
         //job.setMapperClass(AirportNameMapper.class);
         job.setOutputKeyClass(AirportWritableComparable.class);
