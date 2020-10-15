@@ -8,7 +8,7 @@ import org.apache.hadoop.io.LongWritable;
 
 import java.io.IOException;
 
-public class AirportNameMapper extends Mapper<AirportWritableComparable, Text, Text, Text> {
+public class AirportNameMapper extends Mapper<AirportWritableComparable, Text, AirportWritableComparable, Text> {
     @Override
     protected void map(AirportWritableComparable key, Text value, Context context) throws IOException,
             InterruptedException {
