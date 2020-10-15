@@ -1,4 +1,8 @@
-lab1/WordReducer.class
-lab2/AirportNameMapper.class
-lab2/GroupComparator.class
 lab2/AirportWritableComparable.class
+lab2/AirportPartitioner.class
+lab1/WordReducer.class
+lab1/WordCountApp.class
+lab2/AirportNameMapper.class
+lab2/AirportApp.class
+lab2/GroupComparator.class
+lab2/AirportReducer.class
