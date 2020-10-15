@@ -34,9 +34,9 @@ public class AirportWritableComparable implements WritableComparable<AirportWrit
     }
 
     public int compareTo(AirportWritableComparable o) {
-        int r1 =  this.name->compareTo(o.name);
-        if (r1 == 0){
-            return this.code->compareTo(o.code);
+        int r1 =  this.name.compareTo(o.name);
+        if (r1 == 0 && o != null){
+            return this.code.compareTo(o.code);
         } else {
             return r1;
         }
