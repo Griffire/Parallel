@@ -14,8 +14,8 @@ public class AirportWritableComparable implements WritableComparable<AirportWrit
     private String name;
     private String code;
 
-//    public AirportWritableComparable(){
-//    }
+    public AirportWritableComparable(){
+    }
 
     public AirportWritableComparable(String name , String code){
 //        super();
