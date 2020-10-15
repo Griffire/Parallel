@@ -29,7 +29,7 @@ public class AirportReducer extends Reducer<AirportWritableComparable, Text, Tex
                     min = i;
                 }
             } else {
-                name = key.getName();
+                name = v.toString();
             }
         }
 //        context.write(key, new FloatWritable(average));
