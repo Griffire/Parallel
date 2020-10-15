@@ -39,7 +39,7 @@ public class AirportWritableComparable implements WritableComparable<AirportWrit
             return this.code.compareTo(o.code);
         } else {
             return r1;
-//        }
+        }
     }
 
     public String getName() {
