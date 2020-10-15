@@ -14,7 +14,7 @@ public class AirportNameMapper extends Mapper<AirportWritableComparable, Text, T
             InterruptedException {
         String line = value.toString();
         String [] words = line.split("[ , ]");
-        context.write(new Text(AirportWritableComparable(words[0],"0")), new Text(words[1]));
+        context.write(new AirportWritableComparable(words[0],"0"), new Text(words[1]));
 
     }
 }
