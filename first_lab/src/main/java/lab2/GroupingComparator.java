@@ -4,8 +4,8 @@ package lab2;
 import org.apache.hadoop.io.WritableComparable;
 import org.apache.hadoop.io.WritableComparator;
 
-public class GroupingComparator extends WritableComparator {
-    protected GroupingComparator() {
+public class GroupComparator extends WritableComparator {
+    protected GroupComparator() {
         super(AirportWritableComparable.class, true);
     }
 
