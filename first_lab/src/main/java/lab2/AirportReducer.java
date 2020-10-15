@@ -11,7 +11,7 @@ public class AirportReducer extends Reducer<AirportWritableComparable, Text, Tex
     @Override
     protected void reduce(AirportWritableComparable key, Iterable<Text> values, Context context) throws
             IOException, InterruptedException {
-        
+
         long count=0;
         float average = (float) 0.0;
         float min = Float.MAX_VALUE;
@@ -34,7 +34,7 @@ public class AirportReducer extends Reducer<AirportWritableComparable, Text, Tex
             }
         }
 //        context.write(key, new FloatWritable(average));
-        context.write(new Text(key.getCode()), new Text("Name:  "+ name + " average: " + average + " max: " + max + " min: " + min ));
+        context.write(new Text(key.getName() + "__"+key.getCode()), new Text("Name:  "+ name + " average: " + average + " max: " + max + " min: " + min ));
 
     }
 }
