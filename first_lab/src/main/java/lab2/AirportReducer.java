@@ -20,8 +20,8 @@ public class AirportReducer extends Reducer<AirportWritableComparable, Text, Tex
         float max = (float)(-1.0) * Float.MAX_VALUE;
         String name = v.iterNext().toString();
 
-        while ()
-        for (Text v : values) {
+        while (v.hasNext()){
+        //for (Text v : values) {
 
            // if (key.getCode().charAt(0) == '1') {
                 float i = Float.parseFloat(v.toString());
@@ -34,8 +34,8 @@ public class AirportReducer extends Reducer<AirportWritableComparable, Text, Tex
                 if (i < min) {
                     min = i;
                 }
-            } else {
-                name = v.toString();
+//            } else {
+//                name = v.toString();
             }
         }
         if (count > 0) {
