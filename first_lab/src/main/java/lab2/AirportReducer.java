@@ -11,6 +11,7 @@ public class AirportReducer extends Reducer<AirportWritableComparable, Text, Tex
     @Override
     protected void reduce(AirportWritableComparable key, Iterable<Text> values, Context context) throws
             IOException, InterruptedException {
+        
         long count=0;
         float average = (float) 0.0;
         float min = Float.MAX_VALUE;
