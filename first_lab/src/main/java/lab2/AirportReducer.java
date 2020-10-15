@@ -33,8 +33,6 @@ public class AirportReducer extends Reducer<AirportWritableComparable, Text, Tex
                 name = v.toString();
             }
         }
-//        context.write(key, new FloatWritable(average));
-
         if (count > 0) {
             context.write(new Text(key.getCode() + "__" + key.getName()), new Text(" Name:  " + name + " average: " + average + " max: " + max + " min: " + min));
         }

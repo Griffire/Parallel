@@ -13,5 +13,4 @@ public class AirportPartitioner extends Partitioner<WritableComparable, Text> {
         AirportWritableComparable o = (AirportWritableComparable) key;
         return (o.getName().hashCode() & Integer.MAX_VALUE) % numPartitions;
     }
-
 }

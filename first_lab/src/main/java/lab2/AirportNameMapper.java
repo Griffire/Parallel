@@ -19,6 +19,5 @@ public class AirportNameMapper extends Mapper<LongWritable, Text, AirportWritabl
         } else if (words.length == 2){
             context.write(new AirportWritableComparable(words[0], "0"), new Text(words[1]));
         }
-
     }
 }

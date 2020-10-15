@@ -14,8 +14,8 @@ public class AirportWritableComparable implements WritableComparable<AirportWrit
     private String name;
     private String code;
 
-    public AirportWritableComparable(){
-    }
+//    public AirportWritableComparable(){
+//    }
 
     public AirportWritableComparable(String name , String code){
 //        super();
@@ -50,11 +50,4 @@ public class AirportWritableComparable implements WritableComparable<AirportWrit
         return code;
     }
 
-//        public int hashCode() {
-//        final int prime = 31;
-//        int result = 1;
-//        result = prime * result ;//  !
-//        result = prime * result + (int) (timestamp ^ (timestamp >>> 32));
-//        return result;
-//    }
 }
