@@ -15,7 +15,7 @@ import org.apache.hadoop.mapreduce.lib.input.MultipleInputs;
 
 public class AirportApp {
     public static void main(String[] args) throws Exception {
-        if (args.length != 2) {
+        if (args.length != 3) {
             System.err.println("Usage: WordCountApp <input path> <output path>");  //664600583_T_ONTIME_sample.csv
             System.exit(-1);
         }
