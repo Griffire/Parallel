@@ -10,10 +10,10 @@ public class GroupComparator extends WritableComparator {
     }
 
 
-    public int compare(WritableComparable w1, WritableComparable w2) {
-        AirportWritableComparable o1 = (AirportWritableComparable) w1;
-        AirportWritableComparable o2 = (AirportWritableComparable) w2;
+    public int compare(AirportWritableComparable w1, AirportWritableComparable w2) {
+//        AirportWritableComparable o1 = (AirportWritableComparable) w1;
+//        AirportWritableComparable o2 = (AirportWritableComparable) w2;
 
-        return o1.getName().compareTo(o2.getName());
+        return w1.getName().compareTo(w2.getName());
     }
 }
