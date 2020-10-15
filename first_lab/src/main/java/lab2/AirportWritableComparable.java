@@ -24,8 +24,8 @@ public class AirportWritableComparable implements WritableComparable<AirportWrit
     }
 
     public void write(DataOutput out) throws IOException {
-        out.writeUTF(name);
-        out.writeUTF(code);
+        out.writeBytes(name);
+        out.writeBytes(code);
     }
 
     public void readFields(DataInput in) throws IOException {
