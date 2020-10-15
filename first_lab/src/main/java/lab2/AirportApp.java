@@ -31,7 +31,7 @@ public class AirportApp {
         job.setPartitionerClass(AirportPartitioner.class);
         job.setReducerClass(AirportReducer.class);
         job.setGroupingComparatorClass(GroupComparator.class);
-        job.setOutputKeyClass(AirportWritableComparable.class);
+        job.setOutputKeyClass(Text.class);
         job.setOutputValueClass(Text.class);
         job.setNumReduceTasks(2);
         System.exit(job.waitForCompletion(true) ? 0 : 1);
