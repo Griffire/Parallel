@@ -31,8 +31,6 @@ public class AirportApp {
         job.setPartitionerClass(AirportPartitioner.class);
         job.setReducerClass(AirportReducer.class);
         job.setGroupingComparatorClass(GroupComparator.class);
-        //FileInputFormat.addInputPath(job, new Path(args[0]));
-        //job.setMapperClass(AirportNameMapper.class);
         job.setOutputKeyClass(AirportWritableComparable.class);
         job.setOutputValueClass(Text.class);
         job.setNumReduceTasks(2);
