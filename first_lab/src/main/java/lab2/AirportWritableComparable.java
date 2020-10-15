@@ -33,14 +33,14 @@ public class AirportWritableComparable implements WritableComparable<AirportWrit
         code = in.readUTF();
     }
 
-//    public int compareTo(AirportWritableComparable o) {
-//        int r1 =  this.name.compareTo(o.name);
-//        if (r1 == 0 ){
-//            return this.code.compareTo(o.code);
-//        } else {
-//            return r1;
-//        }
-//    }
+    public int compareTo(AirportWritableComparable o) {
+        int r1 =  this.name.compareTo(o.name);
+        if (r1 == 0 ){
+            return this.code.compareTo(o.code);
+        } else {
+            return r1;
+        }
+    }
 
     public String getName() {
         return name;
