@@ -1,7 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
   <component name="ChangeListManager">
-    <list default="true" id="f72c4ef6-e4f1-495c-82fb-45bbb3dcf740" name="Default Changelist" comment="" />
+    <list default="true" id="f72c4ef6-e4f1-495c-82fb-45bbb3dcf740" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/first_lab/src/main/java/lab2/AirportMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/first_lab/src/main/java/lab2/AirportMapper.java" afterDir="false" />
+    </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -42,7 +44,7 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/first_lab/output/part-r-00000">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="781">
@@ -51,16 +53,21 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/first_lab/src/main/java/lab2/AirportMapper.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="240">
-              <caret line="16" column="46" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
+            <state relative-caret-position="255">
+              <caret line="17" column="108" selection-start-line="17" selection-start-column="108" selection-end-line="17" selection-end-column="108" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
             </state>
           </provider>
+        </entry>
+      </file>
+      <file pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/first_lab/664600583_T_ONTIME_sample.csv">
+          <provider selected="true" editor-type-id="text-editor" />
         </entry>
       </file>
       <file pinned="false" current-in-tab="false">
@@ -73,15 +80,6 @@
                 <element signature="e#203#204#0" expanded="true" />
                 <element signature="e#263#264#0" expanded="true" />
               </folding>
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/first_lab/src/main/java/lab1/WordMapper.java">
-          <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="135">
-              <caret line="14" column="32" selection-start-line="14" selection-start-column="32" selection-end-line="14" selection-end-column="42" />
             </state>
           </provider>
         </entry>
@@ -110,8 +108,8 @@
       <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/first_lab/src/main/java/lab2/AirportReducer.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="165">
-              <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+            <state relative-caret-position="345">
+              <caret line="23" column="60" lean-forward="true" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="60" />
               <folding>
                 <element signature="imports" expanded="true" />
               </folding>
@@ -159,8 +157,8 @@
         <option value="$PROJECT_DIR$/first_lab/src/main/java/lab2/AirportWritableComparable.java" />
         <option value="$PROJECT_DIR$/first_lab/src/main/java/lab2/GroupComparator.java" />
         <option value="$PROJECT_DIR$/first_lab/src/main/java/lab2/AirportReducer.java" />
-        <option value="$PROJECT_DIR$/first_lab/src/main/java/lab2/AirportMapper.java" />
         <option value="$PROJECT_DIR$/first_lab/src/main/java/lab2/AirportApp.java" />
+        <option value="$PROJECT_DIR$/first_lab/src/main/java/lab2/AirportMapper.java" />
       </list>
     </option>
   </component>
@@ -403,20 +401,27 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/first_lab/src/main/java/lab2/AirportPartitioner.java">
+    <entry file="file://$PROJECT_DIR$/first_lab/src/main/java/lab2/TestGitWatch.txt">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="210">
-          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
+        <state>
+          <caret column="5" selection-start-column="5" selection-end-column="5" />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/first_lab/src/main/java/lab2/AirportApp.java">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="525">
+          <caret line="35" column="58" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="58" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/first_lab/src/main/java/lab2/TestGitWatch.txt">
+    <entry file="file://$PROJECT_DIR$/first_lab/output/part-r-00000">
       <provider selected="true" editor-type-id="text-editor">
-        <state>
-          <caret column="5" selection-start-column="5" selection-end-column="5" />
+        <state relative-caret-position="781">
+          <caret line="142" lean-forward="true" selection-start-line="142" selection-end-line="142" />
         </state>
       </provider>
     </entry>
@@ -434,16 +439,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/first_lab/src/main/java/lab2/AirportApp.java">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="525">
-          <caret line="35" column="58" selection-start-line="35" selection-start-column="58" selection-end-line="35" selection-end-column="58" />
-          <folding>
-            <element signature="imports" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/first_lab/src/main/java/lab2/GroupComparator.java">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="135">
@@ -456,20 +451,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/first_lab/src/main/java/lab2/AirportMapper.java">
+    <entry file="file://$PROJECT_DIR$/first_lab/src/main/java/lab2/AirportPartitioner.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="240">
-          <caret line="16" column="46" selection-start-line="16" selection-start-column="46" selection-end-line="16" selection-end-column="46" />
+        <state relative-caret-position="210">
+          <caret line="14" column="5" selection-start-line="14" selection-start-column="5" selection-end-line="14" selection-end-column="5" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/first_lab/664600583_T_ONTIME_sample.csv">
+      <provider selected="true" editor-type-id="text-editor" />
+    </entry>
     <entry file="file://$PROJECT_DIR$/first_lab/src/main/java/lab2/AirportReducer.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="165">
-          <caret line="11" column="13" lean-forward="true" selection-start-line="11" selection-start-column="13" selection-end-line="11" selection-end-column="13" />
+        <state relative-caret-position="345">
+          <caret line="23" column="60" lean-forward="true" selection-start-line="23" selection-start-column="22" selection-end-line="23" selection-end-column="60" />
           <folding>
             <element signature="imports" expanded="true" />
           </folding>
@@ -486,10 +484,13 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/first_lab/output/part-r-00000">
+    <entry file="file://$PROJECT_DIR$/first_lab/src/main/java/lab2/AirportMapper.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="781">
-          <caret line="142" lean-forward="true" selection-start-line="142" selection-end-line="142" />
+        <state relative-caret-position="255">
+          <caret line="17" column="108" selection-start-line="17" selection-start-column="108" selection-end-line="17" selection-end-column="108" />
+          <folding>
+            <element signature="imports" expanded="true" />
+          </folding>
         </state>
       </provider>
     </entry>
