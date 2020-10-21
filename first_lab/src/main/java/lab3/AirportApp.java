@@ -11,7 +11,7 @@ public class AirportApp {
     }
 
     public void setup(String[] args){
-        SparkConf 
+        SparkConf sparkConf
     }
 
 }
