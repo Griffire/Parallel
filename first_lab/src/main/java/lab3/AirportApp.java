@@ -12,9 +12,9 @@ public class AirportApp {
         JavaSparkContext sc;
         SparkConf sparkConf = new SparkConf().setAppName("Lab3");
         sc = new JavaSparkContext(sparkConf);
-        String inputFile = "";
+     //   String inputFile = "";
         JavaRDD<String> distFile = sc.textFile( "war-and-peace-1.txt");
-        
+
     }
 
 
