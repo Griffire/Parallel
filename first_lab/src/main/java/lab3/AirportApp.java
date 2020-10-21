@@ -13,7 +13,7 @@ import java.util.Arrays;
 
 public class AirportApp {
 
-    public static void main(String[] args) throws Exception {
+    public static void main(String[] args)  {
         JavaSparkContext sc;
         SparkConf sparkConf = new SparkConf().setAppName("Lab3");
         sc = new JavaSparkContext(sparkConf);
