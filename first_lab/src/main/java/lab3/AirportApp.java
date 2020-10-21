@@ -8,6 +8,6 @@ public class AirportApp {
        execute();
     }
 
-    public void 
+    public void setup(String[] args)
 
 }
