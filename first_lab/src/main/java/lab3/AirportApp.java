@@ -20,7 +20,7 @@ public class AirportApp {
         JavaRDD<String> splitted = distFile.flatMap(
                 s -> Arrays.stream(s.split( " ")).iterator());
         JavaPairRDD<String, Long> wordsWithCount = splitted.mapToPair(
-                s -> new Tuple2<> s, 1l) );
+                s -> new Tuple2<>(s, 1l) );
 
     }
 
