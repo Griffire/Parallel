@@ -22,7 +22,7 @@ public class AirportApp {
                 s -> Arrays.stream(s.split( " ")).iterator());
         JavaPairRDD<String, Long> wordsWithCount = splitted.mapToPair(
                 s -> new Tuple2<>(s, 1l) );
-        wordsWithCount.saveAsHadoopFile("war-and-peace-2.txt");
+        wordsWithCount.saveAsHadoopFile("war-and-peace-2.txt", String.class, Long.class, );
         //JavaPairRDD<String,Long>
 
     }
