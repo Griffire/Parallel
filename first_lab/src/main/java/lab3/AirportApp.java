@@ -3,6 +3,7 @@ package lab3;
 //import org.apache.spark.mapred. ;
 
 import org.apache.spark.SparkConf;
+import org.apache.spark.api.java.JavaPairRDD;
 import org.apache.spark.api.java.JavaRDD;
 import org.apache.spark.api.java.JavaSparkContext;
 
@@ -18,7 +19,7 @@ public class AirportApp {
         JavaRDD<String> distFile = sc.textFile( "war-and-peace-1.txt");
         JavaRDD<String> splitted = distFile.flatMap(
                 s -> Arrays.stream(s.split( " ")).iterator());
-        JavaPairRDD<String, Long> wordsWithCount = splitted.mapToPair(Hadoop
+        JavaPairRDD<String, Long> wordsWithCount = splitted.mapToPair(
                 s -> new Tuple2<> s, 1l) );
 
     }
