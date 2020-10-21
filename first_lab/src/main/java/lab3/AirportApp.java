@@ -17,8 +17,9 @@ public class AirportApp {
      //   String inputFile = "";
         JavaRDD<String> distFile = sc.textFile( "war-and-peace-1.txt");
         JavaRDD<String> splitted = distFile.flatMap(
-                s -> Arrays.stream(s.split( " ")).iterator()
-        );
+                s -> Arrays.stream(s.split( " ")).iterator());
+        JavaPairRDD<String, Long> wordsWithCount = splitted.mapToPair(Hadoop
+                s -> new Tuple2<> s, 1l) );
 
     }
 
