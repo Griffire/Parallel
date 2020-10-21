@@ -11,7 +11,7 @@ public class AirportApp {
     }
 
     public void setup(String[] args){
-        SparkConf sparkConf = new SparkConf().s
+        SparkConf sparkConf = new SparkConf().setAppName()
     }
 
 }
