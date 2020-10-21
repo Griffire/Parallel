@@ -22,7 +22,7 @@ public class AirportApp {
                 s -> Arrays.stream(s.split( " ")).iterator());
         JavaPairRDD<String, Long> wordsWithCount = splitted.mapToPair(
                 s -> new Tuple2<>(s, 1l) );
-        JavaPairRDD<>
+        JavaPairRDD<String,Long> 
 
     }
 }
