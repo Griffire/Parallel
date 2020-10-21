@@ -3,9 +3,10 @@ package lab3;
 //import org.apache.spark.mapred. ;
 
 import org.apache.spark.SparkConf;
+import org.apache.spark.api.java.JavaSparkContext;
 
 public class AirportApp {
-    private 
+    private JavaSparkContext sc;
 
     public static void main(String[] args) throws Exception {
        setup(args);
@@ -14,7 +15,7 @@ public class AirportApp {
 
     public void setup(String[] args){
         SparkConf sparkConf = new SparkConf().setAppName("Lab3");
-
+        sc = 
     }
 
 }
