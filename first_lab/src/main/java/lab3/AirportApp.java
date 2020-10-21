@@ -8,7 +8,7 @@ import org.apache.spark.api.java.JavaSparkContext;
 public class AirportApp {
     private JavaSparkContext sc;
 
-    public  void main(String[] args) throws Exception {
+    public static void main(String[] args) throws Exception {
        setup(args);
        execute();
     }
