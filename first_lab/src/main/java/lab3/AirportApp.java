@@ -11,6 +11,7 @@ public class AirportApp {
         JavaSparkContext sc;
         SparkConf sparkConf = new SparkConf().setAppName("Lab3");
         sc = new JavaSparkContext(sparkConf);
+        String inputFile = 
     }
 
 
