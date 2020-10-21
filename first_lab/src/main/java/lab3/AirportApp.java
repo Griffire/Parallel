@@ -2,6 +2,7 @@ package lab3;
 
 //import org.apache.spark.mapred. ;
 
+import org.apache.hadoop.mapred.TextOutputFormat;
 import org.apache.spark.SparkConf;
 import org.apache.spark.api.java.JavaPairRDD;
 import org.apache.spark.api.java.JavaRDD;
@@ -22,7 +23,7 @@ public class AirportApp {
                 s -> Arrays.stream(s.split( " ")).iterator());
         JavaPairRDD<String, Long> wordsWithCount = splitted.mapToPair(
                 s -> new Tuple2<>(s, 1l) );
-        wordsWithCount.saveAsHadoopFile("war-and-peace-2.txt", String.class, Long.class, );
+        wordsWithCount.saveAsHadoopFile("war-and-peace-2.txt", String.class, Long.class, TextOutputFormat.class);
         //JavaPairRDD<String,Long>
 
     }
