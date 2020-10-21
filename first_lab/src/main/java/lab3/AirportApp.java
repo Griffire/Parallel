@@ -15,7 +15,7 @@ public class AirportApp {
      //   String inputFile = "";
         JavaRDD<String> distFile = sc.textFile( "war-and-peace-1.txt");
         JavaRDD<String> splitted = distFile.flatMap(
-                s -> Arrays.stream(Hadoop s.split( " ")).iterator()
+                s -> Arrays.stream(s.split( " ")).iterator()
         );
 
     }
