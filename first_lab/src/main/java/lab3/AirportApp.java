@@ -18,4 +18,6 @@ public class AirportApp {
         sc = new JavaSparkContext(sparkConf);
     }
 
+    public void execute
+
 }
