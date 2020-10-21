@@ -18,7 +18,7 @@ public class AirportApp {
         SparkConf sparkConf = new SparkConf().setAppName("Lab3");
         sc = new JavaSparkContext(sparkConf);
      //   String inputFile = "";
-        JavaRDD<String> distFile = sc.textFile( "war-and-peace-1.txt");
+        JavaRDD<String> distFile = sc.textFile( "warandpeace-1.txt");
         JavaRDD<String> splitted = distFile.flatMap(
                 s -> Arrays.stream(s.split( " ")).iterator());
         JavaPairRDD<String, Long> wordsWithCount = splitted.mapToPair(
