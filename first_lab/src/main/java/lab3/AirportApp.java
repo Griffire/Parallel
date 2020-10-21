@@ -12,7 +12,7 @@ public class AirportApp {
         SparkConf sparkConf = new SparkConf().setAppName("Lab3");
         sc = new JavaSparkContext(sparkConf);
         String inputFile = "";
-        
+        JavaRDD<String> distFile = sc.textFile(Hadoop "war-and-peace-1.txt");
     }
 
 
