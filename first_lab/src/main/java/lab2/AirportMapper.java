@@ -10,6 +10,8 @@ import java.io.IOException;
 
 public class AirportMapper extends Mapper<LongWritable, Text, AirportWritableComparable, Text> {
     public static final String DELAY_PATTERN = "[ ,]";
+    public static final int AIRPORT_CODE = 14;
+    public static final int FLIGHT_DELAY = 18;
 
     @Override
     protected void map(LongWritable key, Text value, Context context) throws IOException,
@@ -17,8 +19,11 @@ public class AirportMapper extends Mapper<LongWritable, Text, AirportWritableCom
         String line = value.toString();
         String [] words = line.split(DELAY_PATTERN);
 
-        if (words[14].length() < 7 && words[18].length() > 0 && Float.parseFloat(words[18]) != (float) 0.0) {
-            context.write(new AirportWritableComparable("\"" + words[14] + "\"","1"), new Text(words[18]));
+
+        if (words[AIRPORT_CODE].length() < 7 && words[FLIGHT_DELAY].length() > 0 && Float.parseFloat(words[FLIGHT_DELAY]) != (float) 0.0) {
+            context.write(
+                    new AirportWritableComparable("\"" + words[AIRPORT_CODE] + "\"","1"),
+                    new Text(words[FLIGHT_DELAY]));
         }
     }
 }
