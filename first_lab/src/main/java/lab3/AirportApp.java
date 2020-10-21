@@ -14,8 +14,8 @@ public class AirportApp {
         sc = new JavaSparkContext(sparkConf);
      //   String inputFile = "";
         JavaRDD<String> distFile = sc.textFile( "war-and-peace-1.txt");
-        JavaRDD<String> splitted = distFile.flatMap(Hadoop
-                s -> Arrays.stream(Hadoop s.split(Hadoop " ")).iterator(Hadoop )
+        JavaRDD<String> splitted = distFile.flatMap(
+                s -> Arrays.stream(Hadoop s.split( " ")).iterator()
         );
 
     }
