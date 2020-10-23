@@ -11,11 +11,11 @@ import scala.Tuple2;
 
 import java.util.Arrays;
 
-public class AirportApp {
+public class AirportApp3 {
 
     public static void main(String[] args)  {
         JavaSparkContext sc;
-        SparkConf sparkConf = new SparkConf().setAppName("AirportApp");
+        SparkConf sparkConf = new SparkConf().setAppName("AirportApp3");
         sc = new JavaSparkContext(sparkConf);
      //   String inputFile = "";
         JavaRDD<String> distFile = sc.textFile( "warandpeace-1.txt");
