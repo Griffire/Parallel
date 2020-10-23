@@ -1,6 +1,6 @@
 package lab3;
 
-import org.apache.spark.mapred. ;
+import org.apache.spark.mapred.* ;
 
 import org.apache.hadoop.mapred.TextOutputFormat;
 import org.apache.spark.SparkConf;
