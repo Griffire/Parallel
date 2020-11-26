@@ -39,7 +39,7 @@ public class AirportApp3 {
         JavaRDD<String> fAIRPORT_ID = dist1.filter(s->s._2() >= 2).keys();
 
 
-        Map<String,String> AIRPORT_NAMES = fAIRPORT_ID.map(str -> str.split(",")).mapToPair(s -> new Tuple2<>(s[0],s[1]));
+        Map<String,String> AIRPORT_NAMES = fAIRPORT_ID.map(str -> str.split(",")).mapToPair(str -> new Tuple2<>(str[0],str[1]));
         JavaPairRDD<String, Long> wordsWithCount = splitted.mapToPair(
                 s -> new Tuple2<>(s, 1l) );
         JavaRDD<String> output = wordsWithCount.map(stringLongTuple2 -> {String str = "word:" +
