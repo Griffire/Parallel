@@ -4,14 +4,17 @@ import java.io.Serializable;
 
 public class Times implements Serializable{
     private float delay;
-    private int canceled;
+    private float canceled;
     private int delayN;
     private int canceledN;
     Times(){}
 
     Times(String time, String canceled){
-        this.delay = time;
-
-
+        this.delay = Float.parseFloat(time);
+        this.canceled = Float.parseFloat(canceled);
+        this.delayN = 1;
+        this.canceledN = 1;
     }
+
+    
 }
