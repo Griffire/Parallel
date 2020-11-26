@@ -16,7 +16,7 @@ import org.apache.hadoop.mapreduce.lib.input.MultipleInputs;
 public class AirportApp {
     public static void main(String[] args) throws Exception {
         if (args.length != 3) {
-            System.err.println("Usage: AirportApp3 <input path> <input path> <output path>");  //664600583_T_ONTIME_sample.csv
+            System.err.println("Usage: AirportApp3 <input path> <input path> <output path>");  //AIROPRT_TIMES.csv
             System.exit(-1);
         }
 
