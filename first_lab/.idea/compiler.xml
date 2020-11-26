@@ -7,9 +7,11 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="hadoop-examples" />
+        <module name="first_lab" />
       </profile>
     </annotationProcessing>
     <bytecodeTargetLevel>
+      <module name="first_lab" target="1.8" />
       <module name="hadoop-examples" target="1.8" />
     </bytecodeTargetLevel>
   </component>
