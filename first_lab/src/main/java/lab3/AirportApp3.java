@@ -1,5 +1,6 @@
 package lab3;
 
+import org.apache.spark.broadcast.Broadcast;
 import org.apache.spark.mapred.* ;
 
 import org.apache.hadoop.mapred.TextOutputFormat;
@@ -42,13 +43,16 @@ public class AirportApp3 {
         Map<String,String> AIRPORT_NAMES = fAIRPORT_ID.map(str -> str.split(",")).mapToPair(str -> new Tuple2<>(str[0],str[1])).collectAsMap();
 
 
-        JavaPairRDD<String, Long> wordsWithCount = splitted.mapToPair(
-                s -> new Tuple2<>(s, 1l) );
-        JavaRDD<String> output = wordsWithCount.map(stringLongTuple2 -> {String str = "word:" +
-                stringLongTuple2._1() + " count:" + stringLongTuple2._2();
-                 return str;
-                 }) ;
-        output.saveAsTextFile("output");
+        final Broadcast<Map<String, String>> airportsBroadcasted =
+                sc.broadcast(AIRPORT_NAMES);
+
+//        JavaPairRDD<String, Long> wordsWithCount = splitted.mapToPair(
+//                s -> new Tuple2<>(s, 1l) );
+//        JavaRDD<String> output = wordsWithCount.map(stringLongTuple2 -> {String str = "word:" +
+//                stringLongTuple2._1() + " count:" + stringLongTuple2._2();
+//                 return str;
+//                 }) ;
+//        output.saveAsTextFile("output");
 
 
 
