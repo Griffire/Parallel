@@ -1,2 +1,4 @@
-package lab3;public class Times {
+package lab3;
+
+public class Times {
 }
