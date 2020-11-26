@@ -32,11 +32,13 @@ public class AirportApp3 {
 
 
         JavaPairRDD<String,Long> dist1 = AIRPORT_TIMES.zipWithIndex();
-        JavaRDD<String> f = dist1.filter(s->s._2() >= 23).keys();
+        JavaRDD<String> fAIRPORT_TIMES = dist1.filter(s->s._2() >= 23).keys();
+
+        JavaPairRDD<String,Long> dist2 = AIRPORT_TIMES.zipWithIndex();
+        JavaRDD<String> fAIRPORT_ID = dist1.filter(s->s._2() >= 2).keys();
 
 
-        JavaRDD<String> splitted = distFile.flatMap(
-                s -> Arrays.stream(s.split( " ")).iterator());
+        
         JavaPairRDD<String, Long> wordsWithCount = splitted.mapToPair(
                 s -> new Tuple2<>(s, 1l) );
         JavaRDD<String> output = wordsWithCount.map(stringLongTuple2 -> {String str = "word:" +
