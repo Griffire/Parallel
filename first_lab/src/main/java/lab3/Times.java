@@ -5,15 +5,11 @@ import java.io.Serializable;
 public class Times implements Serializable{
     private float delay;
     private float canceled;
-    private int delayN;
-    private int canceledN;
     Times(){}
 
     Times(String time, String canceled){
         this.delay = Float.parseFloat(time);
         this.canceled = Float.parseFloat(canceled);
-        this.delayN = 1;
-        this.canceledN = 1;
     }
 
     public Times counting (Iterable<Times> time){
@@ -34,7 +30,15 @@ public class Times implements Serializable{
                 canceledSum ++;
             }
         }
-        Times ret = new Times( Float.toString(delaySum/(float)n) , Float.toString(canceledSum/ (float) n);
+        Times ret = new Times( Float.toString(delaySum/(float)n) , Float.toString(canceledSum/ (float) n));
         return ret;
+    }
+
+    public float getDelay() {
+        return delay;
+    }
+
+    public float getCanceled() {
+        return canceled;
     }
 }
