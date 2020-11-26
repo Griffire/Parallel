@@ -28,7 +28,8 @@ public class AirportApp3 {
                 stringLongTuple2._1 + " count:" + stringLongTuple2._2;
                  return str;
                  }) ;
-        System.out.println("Nice!\n\n");
+        output.saveAsTextFile(outputFileName);
+      //  System.out.println("Nice!\n\n");
        //wordsWithCount.saveAsHadoopFile("war-and-peace-2.txt", String.class, Long.class, TextOutputFormat.class);
         //JavaPairRDD<String,Long>
 
