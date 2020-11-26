@@ -46,6 +46,7 @@ public class AirportApp3 {
         final Broadcast<Map<String, String>> airportsBroadcasted =
                 sc.broadcast(AIRPORT_NAMES);
 
+        
 //        JavaPairRDD<String, Long> wordsWithCount = splitted.mapToPair(
 //                s -> new Tuple2<>(s, 1l) );
 //        JavaRDD<String> output = wordsWithCount.map(stringLongTuple2 -> {String str = "word:" +
