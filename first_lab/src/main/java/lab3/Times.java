@@ -34,6 +34,7 @@ public class Times implements Serializable{
                 canceledSum ++;
             }
         }
-        Times ret = new Times()
+        Times ret = new Times( Float.toString(delaySum/(float)n) , Float.toString(canceledSum/ (float) n);
+        return ret;
     }
 }
