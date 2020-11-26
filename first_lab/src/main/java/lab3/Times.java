@@ -1,5 +1,7 @@
 package lab3;
 
-public class Times {
-    
+import java.io.Serializable;
+
+public class Times implements Serializable{
+
 }
