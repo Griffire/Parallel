@@ -24,7 +24,7 @@ public class AirportApp3 {
 
 
         JavaPairRDD<String,Long> dist1 = distFile.zipWithIndex();
-        dist1.filter()
+        dist1.filter(s->s._2())
 
 
         JavaRDD<String> splitted = distFile.flatMap(
