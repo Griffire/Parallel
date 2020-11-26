@@ -16,7 +16,7 @@ public class Times implements Serializable{
         this.canceledN = 1;
     }
 
-    public Times counting (){
-        
+    public Times counting (Iterable<Times> time){
+
     }
 }
