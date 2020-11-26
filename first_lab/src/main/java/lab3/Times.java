@@ -17,15 +17,17 @@ public class Times implements Serializable{
     }
 
     public Times counting (Iterable<Times> time){
-
+        float delaySum = (float) 0.0;
         float maxDelay = (float)0.0;
         float canceled = (float) 0.0;
         int n = 0;
         for (Times t : time){
             n++;
-            if ( maxDelay < t.delay) {
-                maxDelay = t.delay;
-
+            if (t.delay > 0){
+                if ( maxDelay < t.delay) {
+                    maxDelay = t.delay;
+                }
+                delaySum += t.delay;
             }
         }
     }
