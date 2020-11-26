@@ -19,7 +19,7 @@ public class AirportApp3 {
         SparkConf sparkConf = new SparkConf().setAppName("AirportApp3");
         sc = new JavaSparkContext(sparkConf);
      //   String inputFile = "";
-        JavaRDD<String> distFile = sc.textFile( "warandpeace-1.txt");
+        JavaRDD<String> distFile = sc.textFile( "warandpeace1.txt");
         JavaRDD<String> splitted = distFile.flatMap(
                 s -> Arrays.stream(s.split( " ")).iterator());
         JavaPairRDD<String, Long> wordsWithCount = splitted.mapToPair(
@@ -28,7 +28,7 @@ public class AirportApp3 {
                 stringLongTuple2._1 + " count:" + stringLongTuple2._2;
                  return str;
                  }) ;
-        output.saveAsTextFile(outputFileName);
+        output.saveAsTextFile("output");
       //  System.out.println("Nice!\n\n");
        //wordsWithCount.saveAsHadoopFile("war-and-peace-2.txt", String.class, Long.class, TextOutputFormat.class);
         //JavaPairRDD<String,Long>
