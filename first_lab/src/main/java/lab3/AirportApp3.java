@@ -19,10 +19,10 @@ public class AirportApp3 {
         SparkConf sparkConf = new SparkConf().setAppName("AirportApp3");
         sc = new JavaSparkContext(sparkConf);
      //   String inputFile = "";
-        JavaRDD<String> distFile = sc.textFile( "warandpeace1.txt").;
+        JavaRDD<String> distFile = sc.textFile( "warandpeace1.txt");
         JavaRDD<String> distFile2 = sc.textFile( "warandpeace2.txt");
+        f = distFile.zipWithIndex()
 
-        
 
         JavaRDD<String> splitted = distFile.flatMap(
                 s -> Arrays.stream(s.split( " ")).iterator());
