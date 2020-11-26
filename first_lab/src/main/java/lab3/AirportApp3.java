@@ -13,18 +13,25 @@ import java.util.Arrays;
 
 public class AirportApp3 {
 
+    public static String AIRPORT_TIMES_SPLIT = "[ ,]";
+    public static String AIRPORT_ID_SPLIT = "[,]";
+
+
     public static void main(String[] args)  {
         JavaSparkContext sc;
 
         SparkConf sparkConf = new SparkConf().setAppName("AirportApp3");
         sc = new JavaSparkContext(sparkConf);
      //   String inputFile = "";
-        JavaRDD<String> AIRPORT_TIMES = sc.textFile( "AIRPORT_TIMES.csv").flatMap(s -> Arrays.stream(s.split( " ")).iterator()) ;
-        JavaRDD<String> AIRPORT_ID = sc.textFile( "L_AIRPORT_ID.csv");
+        JavaRDD<String> AIRPORT_TIMES = sc.textFile( "AIRPORT_TIMES.csv").
+                flatMap(s -> Arrays.stream(s.split( AIRPORT_TIMES_SPLIT)).iterator());
+
+        JavaRDD<String> AIRPORT_ID = sc.textFile( "L_AIRPORT_ID.csv").
+                flatMap(s -> Arrays.stream(s.split( AIRPORT_ID_SPLIT)).iterator());;
 
 
 
-        JavaPairRDD<String,Long> dist1 = distFile.zipWithIndex();
+        JavaPairRDD<String,Long> dist1 = AIRPORT_TIMES.zipWithIndex();
         JavaRDD<String> f = dist1.filter(s->s._2() >= 100).keys();
 
 
