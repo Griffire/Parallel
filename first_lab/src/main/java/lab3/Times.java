@@ -16,5 +16,5 @@ public class Times implements Serializable{
         this.canceledN = 1;
     }
 
-    
+    public Times
 }
