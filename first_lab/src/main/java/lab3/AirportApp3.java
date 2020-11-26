@@ -46,7 +46,7 @@ public class AirportApp3 {
         final Broadcast<Map<String, String>> airportsBroadcasted =
                 sc.broadcast(AIRPORT_NAMES);
 
-        JavaPairRDD<Tuple2<String,String>, Times> fDelay = fAIRPORT_TIMES.map( s -> s.split(",")).mapToPair(strings -> new Tuple2<>(new Tuple2<>()))
+        JavaPairRDD<Tuple2<String,String>, Times> fDelay = fAIRPORT_TIMES.map( s -> s.split(",")).mapToPair(strings -> new Tuple2<>(new Tuple2<>(strings[], strings[]), ))
 
 //        JavaPairRDD<String, Long> wordsWithCount = splitted.mapToPair(
 //                s -> new Tuple2<>(s, 1l) );
