@@ -21,7 +21,10 @@ public class AirportApp3 {
      //   String inputFile = "";
         JavaRDD<String> distFile = sc.textFile( "warandpeace1.txt");
         JavaRDD<String> distFile2 = sc.textFile( "warandpeace2.txt");
-        f = distFile.zipWithIndex()
+
+
+        JavaPairRDD<String,Long> dist1 = distFile.zipWithIndex();
+        dist1.filter()
 
 
         JavaRDD<String> splitted = distFile.flatMap(
