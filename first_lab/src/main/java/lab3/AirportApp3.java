@@ -32,7 +32,7 @@ public class AirportApp3 {
         JavaPairRDD<String, Long> wordsWithCount = splitted.mapToPair(
                 s -> new Tuple2<>(s, 1l) );
         JavaRDD<String> output = wordsWithCount.map(stringLongTuple2 -> {String str = "word:" +
-                stringLongTuple2._1 + " count:" + stringLongTuple2._2;
+                stringLongTuple2._1() + " count:" + stringLongTuple2._2;
                  return str;
                  }) ;
         output.saveAsTextFile("output");
