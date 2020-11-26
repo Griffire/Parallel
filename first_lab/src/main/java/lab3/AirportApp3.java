@@ -32,7 +32,7 @@ public class AirportApp3 {
 
 
         JavaPairRDD<String,Long> dist1 = AIRPORT_TIMES.zipWithIndex();
-        JavaRDD<String> f = dist1.filter(s->s._2() >= 100).keys();
+        JavaRDD<String> f = dist1.filter(s->s._2() >= 23).keys();
 
 
         JavaRDD<String> splitted = distFile.flatMap(
