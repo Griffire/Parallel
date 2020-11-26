@@ -19,6 +19,7 @@ public class Times implements Serializable{
     public Times counting (Iterable<Times> time){
 
         float maxDelay = (float)0.0;
+        float canceled = (float) 0.0;
         
     }
 }
