@@ -36,7 +36,7 @@ public class AirportApp3 {
         JavaRDD<String> fAIRPORT_TIMES = dist1.filter(s->s._2() >= 23).keys();
 
         JavaPairRDD<String,Long> dist2 = AIRPORT_TIMES.zipWithIndex();
-        JavaRDD<String> fAIRPORT_ID = dist1.filter(s->s._2() >= 2).keys();
+        JavaRDD<String> fAIRPORT_ID = dist2.filter(s->s._2() >= 2).keys();
 
 
         Map<String,String> AIRPORT_NAMES = fAIRPORT_ID.map(str -> str.split(",")).mapToPair(str -> new Tuple2<>(str[0],str[1]));
