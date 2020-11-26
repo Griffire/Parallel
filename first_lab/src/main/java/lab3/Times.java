@@ -21,8 +21,11 @@ public class Times implements Serializable{
         float maxDelay = (float)0.0;
         float canceled = (float) 0.0;
 
-        for (t : time){
-            t
+        for (Times t : time){
+            if ( maxDelay < t.delayN{
+                maxDelay = t.delay;
+                
+            }
         }
     }
 }
