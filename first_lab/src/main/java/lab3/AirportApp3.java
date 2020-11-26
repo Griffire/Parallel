@@ -46,7 +46,11 @@ public class AirportApp3 {
         final Broadcast<Map<String, String>> airportsBroadcasted =
                 sc.broadcast(AIRPORT_NAMES);
 
-        
+        JavaRDD<String> output = .map(str -> {
+            String temp = "From  " + airportsBroadcasted.value().get(str._1._1) + "  TO  " +
+                    airportsBroadcasted.value().get(str._1._2) + "   " + str._2;
+            return temp;
+        });
 //        JavaPairRDD<String, Long> wordsWithCount = splitted.mapToPair(
 //                s -> new Tuple2<>(s, 1l) );
 //        JavaRDD<String> output = wordsWithCount.map(stringLongTuple2 -> {String str = "word:" +
