@@ -19,7 +19,8 @@ public class Times implements Serializable{
     public Times counting (Iterable<Times> time){
         float delaySum = (float) 0.0;
         float maxDelay = (float)0.0;
-        float canceled = (float) 0.0;
+        float canceledSum = (float) 0.0;
+
         int n = 0;
         for (Times t : time){
             n++;
@@ -28,6 +29,9 @@ public class Times implements Serializable{
                     maxDelay = t.delay;
                 }
                 delaySum += t.delay;
+            }
+            if (t.canceled > 0){
+                canceledSum ++;
             }
         }
     }
