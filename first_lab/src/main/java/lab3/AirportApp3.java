@@ -51,7 +51,7 @@ public class AirportApp3 {
                 new Times(strings[18],strings[19]))).groupByKey().mapValues(s -> new Times().counting(s));
 
         JavaRDD<String> output = fDelay.map(s -> {
-            String str = "NameFrom : " + 
+            String str = "NameFrom : " + airportsBroadcasted
                  }) ;
         output.saveAsTextFile("output");
 
