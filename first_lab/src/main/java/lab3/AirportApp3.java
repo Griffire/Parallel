@@ -28,8 +28,10 @@ public class AirportApp3 {
         JavaRDD<String> AIRPORT_TIMES = sc.textFile( "AIRPORT_TIMES.csv").
                 flatMap(s -> Arrays.stream(s.split( AIRPORT_TIMES_SPLIT)).iterator());
 
-        JavaRDD<String> AIRPORT_ID = sc.textFile( "L_AIRPORT_ID.csv").
-                flatMap(s -> Arrays.stream(s.split( AIRPORT_ID_SPLIT)).iterator());;
+        JavaRDD<String> AIRPORT_ID = sc.textFile( "L_AIRPORT_ID.csv");
+//                flatMap(s -> Arrays.stream(s.split( AIRPORT_ID_SPLIT)).iterator());;
+
+        JavaRDD<String> Airp = AIRPORT_ID.first();
 
 
 
