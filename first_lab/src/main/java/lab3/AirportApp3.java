@@ -40,7 +40,7 @@ public class AirportApp3 {
         JavaRDD<String> fAIRPORT_ID = dist2.filter(s->s._2() >= 2).keys();
 
 
-        Map<String,String> AIRPORT_NAMES = fAIRPORT_ID.map(str -> str.split(",")).mapToPair(str -> new Tuple2<>(str[0],str[1])).collectAsMap();
+        Map<String,String> AIRPORT_NAMES = fAIRPORT_ID.map(str -> str.split("\"")).mapToPair(str -> new Tuple2<>(str[1],str[3])).collectAsMap();
 
 
         final Broadcast<Map<String, String>> airportsBroadcasted =
