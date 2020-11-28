@@ -48,7 +48,7 @@ public class AirportApp3 {
 
         JavaPairRDD<Tuple2<String,String>, Times> fDelay = fAIRPORT_TIMES.map( s -> s.split(",")).mapToPair(strings ->
                 new Tuple2<>(new Tuple2<>(strings[1], strings[1]),
-                new Times(strings[1],strings[1]))).groupByKey().mapValues(s -> new Times());
+                new Times(strings[1],strings[1]))).groupByKey().mapValues(s -> new Times().counting());
 
 //        JavaPairRDD<String, Long> wordsWithCount = splitted.mapToPair(
 //                s -> new Tuple2<>(s, 1l) );
