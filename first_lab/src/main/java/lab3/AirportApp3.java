@@ -32,15 +32,15 @@ public class AirportApp3 {
 //                flatMap(s -> Arrays.stream(s.split( AIRPORT_ID_SPLIT)).iterator());;
 
         String Airp = AIRPORT_ID.first();
-        AIRPORT_ID = AIRPORT_ID.filter(s -> !s.equals(Airp)).flatMap(s -> Arrays.stream(s.split( AIRPORT_ID_SPLIT)).iterator());
+        JavaRDD<String> fAIRPORT_ID = AIRPORT_ID.filter(s -> !s.equals(Airp));
 
 
 
         JavaPairRDD<String,Long> dist1 = AIRPORT_TIMES.zipWithIndex();
         JavaRDD<String> fAIRPORT_TIMES = dist1.filter(s->s._2() >= 23).keys();
 
-        JavaPairRDD<String,Long> dist2 = AIRPORT_TIMES.zipWithIndex();
-        JavaRDD<String> fAIRPORT_ID = dist2.filter(s->s._2() >= 2).keys();
+//        JavaPairRDD<String,Long> dist2 = AIRPORT_TIMES.zipWithIndex();
+//        JavaRDD<String> fAIRPORT_ID = dist2.filter(s->s._2() >= 2).keys();
 
 
         Map<String,String> AIRPORT_NAMES = fAIRPORT_ID.map(str -> str.split("\"")).mapToPair(str -> new Tuple2<>(str[1],str[3])).collectAsMap();
