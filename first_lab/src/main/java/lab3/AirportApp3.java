@@ -31,7 +31,8 @@ public class AirportApp3 {
         JavaRDD<String> AIRPORT_ID = sc.textFile( "L_AIRPORT_ID.csv");
 //                flatMap(s -> Arrays.stream(s.split( AIRPORT_ID_SPLIT)).iterator());;
 
-        JavaRDD<String> Airp = AIRPORT_ID.first();
+        String Airp = AIRPORT_ID.first();
+        AIRPORT_ID = AIRPORT_ID.filter(s -> !s.equals(Airp));
 
 
 
