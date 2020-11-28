@@ -32,7 +32,7 @@ public class AirportApp3 {
 //                flatMap(s -> Arrays.stream(s.split( AIRPORT_ID_SPLIT)).iterator());;
 
         String Airp = AIRPORT_ID.first();
-        AIRPORT_ID = AIRPORT_ID.filter(s -> !s.equals(Airp));
+        AIRPORT_ID = AIRPORT_ID.filter(s -> !s.equals(Airp)).flatMap(s -> Arrays.stream(s.split( AIRPORT_ID_SPLIT)).iterator());
 
 
 
