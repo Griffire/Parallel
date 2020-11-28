@@ -50,7 +50,8 @@ public class AirportApp3 {
                 new Tuple2<>(new Tuple2<>(strings[11], strings[14]),
                 new Times(strings[18],strings[19]))).groupByKey().mapValues(s -> new Times().counting(s));
 
-        JavaRDD<String> output = fDelay.map(s ->
+        JavaRDD<String> output = fDelay.map(s -> {
+
                  }) ;
         output.saveAsTextFile("output");
 
