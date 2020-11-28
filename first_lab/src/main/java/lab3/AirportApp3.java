@@ -25,8 +25,8 @@ public class AirportApp3 {
         SparkConf sparkConf = new SparkConf().setAppName("AirportApp3");
         sc = new JavaSparkContext(sparkConf);
      //   String inputFile = "";
-        JavaRDD<String> AIRPORT_TIMES = sc.textFile( "AIRPORT_TIMES.csv").
-                flatMap(s -> Arrays.stream(s.split( AIRPORT_TIMES_SPLIT)).iterator());
+        JavaRDD<String> AIRPORT_TIMES = sc.textFile( "AIRPORT_TIMES.csv");
+//                flatMap(s -> Arrays.stream(s.split( AIRPORT_TIMES_SPLIT)).iterator());
 
         JavaRDD<String> AIRPORT_ID = sc.textFile( "L_AIRPORT_ID.csv");
 //                flatMap(s -> Arrays.stream(s.split( AIRPORT_ID_SPLIT)).iterator());;
@@ -34,10 +34,13 @@ public class AirportApp3 {
         String Airp = AIRPORT_ID.first();
         JavaRDD<String> fAIRPORT_ID = AIRPORT_ID.filter(s -> !s.equals(Airp));
 
+        String AirpTimes = AIRPORT_TIMES.first();
+        JavaRDD<String> fAIRPORT_TIMES = AIRPORT_TIMES.filter(s -> !s.equals(AirpTimes));
 
 
-        JavaPairRDD<String,Long> dist1 = AIRPORT_TIMES.zipWithIndex();
-        JavaRDD<String> fAIRPORT_TIMES = dist1.filter(s->s._2() >= 23).keys();
+
+//        JavaPairRDD<String,Long> dist1 = AIRPORT_TIMES.zipWithIndex();
+//         fAIRPORT_TIMES = dist1.filter(s->s._2() >= 23).keys();
 
 //        JavaPairRDD<String,Long> dist2 = AIRPORT_TIMES.zipWithIndex();
 //        JavaRDD<String> fAIRPORT_ID = dist2.filter(s->s._2() >= 2).keys();
