@@ -50,19 +50,10 @@ public class AirportApp3 {
                 new Tuple2<>(new Tuple2<>(strings[11], strings[14]),
                 new Times(strings[18],strings[19]))).groupByKey().mapValues(s -> new Times().counting(s));
 
-//        JavaPairRDD<String, Long> wordsWithCount = splitted.mapToPair(
-//                s -> new Tuple2<>(s, 1l) );
-//        JavaRDD<String> output = wordsWithCount.map(stringLongTuple2 -> {String str = "word:" +
-//                stringLongTuple2._1() + " count:" + stringLongTuple2._2();
-//                 return str;
-//                 }) ;
-//        output.saveAsTextFile("output");
+        JavaRDD<String> output = fDelay.map(
+                 }) ;
+        output.saveAsTextFile("output");
 
-
-
-       System.out.println("Nice!\n\n");
-       //wordsWithCount.saveAsHadoopFile("war-and-peace-2.txt", String.class, Long.class, TextOutputFormat.class);
-        //JavaPairRDD<String,Long>
 
     }
 
