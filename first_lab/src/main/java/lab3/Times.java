@@ -8,8 +8,15 @@ public class Times implements Serializable{
     Times(){}
 
     Times(String time, String canceled){
-        this.delay = Float.parseFloat(time);
-        this.canceled = Float.parseFloat(canceled);
+        this.delay = 0f;
+        this.canceled = 0f;
+        if (time.length() > 0) {
+            this.delay = Float.parseFloat(time);
+        }
+
+        if (canceled.length() > 0) {
+            this.canceled = Float.parseFloat(canceled);
+        }
     }
 
     public Times counting (Iterable<Times> time){

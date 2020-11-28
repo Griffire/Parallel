@@ -23,7 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10c591c7-509c-4051-b43c-28edb083abaf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/lab3/AirportApp3.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lab3/AirportApp3.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lab3/Times.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lab3/Times.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -78,7 +78,7 @@
       <option name="presentableId" value="Default" />
       <updated>1602940997937</updated>
       <workItem from="1606397265245" duration="15033000" />
-      <workItem from="1606568703832" duration="2133000" />
+      <workItem from="1606568703832" duration="2493000" />
     </task>
     <servers />
   </component>
