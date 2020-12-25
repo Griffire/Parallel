@@ -1,11 +1,11 @@
 package lab4;
 
 import akka.actor.ActorRef;
-import com.squareup.okhttp.Route;
+import akka.http.javadsl.server.Route;
 
 public class ParsingModule {
 
-    public class ParsingModule(ActorRef router) {
+    ParsingModule(ActorRef router) {
         this.router = router;
     }
 
