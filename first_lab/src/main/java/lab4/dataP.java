@@ -11,7 +11,7 @@ public class dataP {
     @JsonProperty("tests") ArrayList<testP> tests;
 
 
-    @JsonCreator dataP(String idS, ArrayList<testP> tests){
+    @JsonCreator dataP(String idS, ArrayList<testP> tests, ){
         this.idS = idS;
         this.tests = tests;
     }
