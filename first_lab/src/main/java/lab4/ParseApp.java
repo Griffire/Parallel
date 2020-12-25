@@ -14,7 +14,6 @@ public class ParseApp {
         ActorSystem s1 = ActorSystem.create("test1");
         ActorRef routerActor = s1.actorOf(Props.create(RouterActor.class), "Router1");
         Http http = Http.get(s1);
-        HttpParse instance  new HttpPars
 
 
 
