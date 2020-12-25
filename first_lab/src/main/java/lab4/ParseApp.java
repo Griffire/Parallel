@@ -32,8 +32,9 @@ public class ParseApp {
         Materializer m1 = Materializer.createMaterializer(s1);
         Flow<HttpRequest, HttpResponse,NotUsed> r1Flow = PM.newRouter().flow(s1,m1);
         CompletionStage<ServerBinding> sBind = http.bindAndHandle(r1Flow, ConnectHttp.toHost("localhost:8888"),m1);
-        LoggingAdapter l = Logging.getLogger(s1, System.out);
-        
+        LoggingAdapter log = Logging.getLogger(s1, System.out);
+        log.info("Server online ");
+
         System.in.read();
         sBind.thenCompose(ServerBinding::unbind).thenAccept(unbound -> s1.terminate());
     }
