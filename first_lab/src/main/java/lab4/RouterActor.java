@@ -10,10 +10,11 @@ import akka.event.LoggingAdapter;
 import akka.routing.BalancingPool;
 
 public class RouterActor extends AbstractActor {
-    private final LoggingAdapter log = Logging.getLogger(getContext().getSystem(), self());
+    private LoggingAdapter log;
 
-    public RouterActor {
-        
+    public RouterActor() {
+        this.log = Logging.getLogger(getContext().getSystem(), self());
+
     }
 
     private String executeTests(dataP msg) {
