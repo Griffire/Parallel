@@ -1,9 +1,11 @@
 package lab4;
 
 public class MessageP {
-    private String idS;
+    private final String idS;
 
     MessageP(String idS){
         this.idS = idS;
     }
+
+
 }

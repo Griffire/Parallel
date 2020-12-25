@@ -28,10 +28,11 @@ public class ParsingModule {
         Route r;
         Duration t1 = Duration.ofSeconds(5);
         Timeout t2 = Timeout.create(t1);
-        MessageP
-        Future<Object> yy = Patterns.as
+        MessageP ps= new MessageP("s");
+        Futureco
+        Future<Object> yy = Patterns.a
         r = get(()-> parameter("", (p) -> {
-            Future<Object> f = Patterns.ask(this.router,new MessageP(p) , t2);
+            Future<Object> f = Patterns.ask(this.router, ps , t2);
             return  completeOKWithFuture(f,Jackson.marshaller());
         })),
 
