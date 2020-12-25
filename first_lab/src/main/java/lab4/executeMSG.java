@@ -4,5 +4,5 @@ import java.util.ArrayList;
 
 public class executeMSG {
     private  ArrayList<Object> params;
-    private 
+    private String idS , 
 }
