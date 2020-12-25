@@ -39,12 +39,13 @@
 
         <dependency>
             <groupId>com.typesafe.akka</groupId>
-            <artifactId>akka-http-bom_${scala.binary.version}</artifactId>
-            <version>${akka.http.version}</version>
-            <type>pom</type>
-            <scope>import</scope>
+            <artifactId>akka-http_${scala.binary.version}</artifactId>
         </dependency>
-        
+        <dependency>
+            <groupId>com.typesafe.akka</groupId>
+            <artifactId>akka-actor-typed_${scala.binary.version}</artifactId>
+            <version>${akka.version}</version>
+        </dependency>
         <dependency>
             <groupId>com.typesafe.akka</groupId>
             <artifactId>akka-stream_${scala.binary.version}</artifactId>
@@ -64,8 +65,12 @@
             <artifactId>akka-http-testkit_${scala.binary.version}</artifactId>
             <scope>test</scope>
         </dependency>
-
-
+        <dependency>
+            <groupId>com.typesafe.akka</groupId>
+            <artifactId>akka-actor-testkit-typed_${scala.binary.version}</artifactId>
+            <version>${akka.version}</version>
+            <scope>test</scope>
+        </dependency>
         <dependency>
             <groupId>junit</groupId>
             <artifactId>junit</artifactId>
