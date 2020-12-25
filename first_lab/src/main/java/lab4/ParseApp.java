@@ -18,6 +18,8 @@ import akka.stream.ActorMaterializer;
 
 import java.util.concurrent.CompletionStage;
 
+import akka.event.Logging;
+import akka.event.LoggingAdapter;
 
 public class ParseApp {
 
@@ -31,6 +33,7 @@ public class ParseApp {
         Flow<HttpRequest, HttpResponse,NotUsed> r1Flow = PM.newRouter().flow(s1,m1);
         CompletionStage<ServerBinding> sBind = http.bindAndHandle(r1Flow, ConnectHttp.toHost("localhost:8888"),m1);
         LoggingAdapter l = Logging.getLogger(s1, System.out);
+        
         System.in.read();
         sBind.thenCompose(ServerBinding::unbind).thenAccept(unbound -> s1.terminate());
     }
