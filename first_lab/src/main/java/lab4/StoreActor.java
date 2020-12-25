@@ -23,7 +23,8 @@ public class StoreActor extends AbstractActor {
         if (results != null){
             results.add(msg.getRes());
         } else {
-            results.add(msg.getRes())
+            results.add(msg.getRes());
+            actorStorage.in
 
         }
     }
