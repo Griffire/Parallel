@@ -1,6 +1,6 @@
 package lab4;
 
-import akka
+import akka.
 public class ParseApp {
 
 }
