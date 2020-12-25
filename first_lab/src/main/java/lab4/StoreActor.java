@@ -2,6 +2,7 @@ package lab4;
 import akka.actor.AbstractActor;
 import akka.event.Logging;
 import akka.event.LoggingAdapter;
+import akka.japi.pf.ReceiveBuilder;
 
 import java.util.ArrayList;
 import java.util.HashMap;
@@ -35,7 +36,10 @@ public class StoreActor extends AbstractActor {
 
     @Override
     public Receive createReceive() {
-        return null;
-    }
+        return ReceiveBuilder.create()
+                .match(MessageP.class, this::insert)
+                .match(MessageP.class, this::send)
+                .matchAny(o -> log.info("unknown res"))
+                .build();    }
 
 }
