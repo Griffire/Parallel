@@ -1,6 +1,7 @@
 package lab4;
 
 import akka.actor.AbstractActor;
+import akka.actor.ActorRef;
 import akka.event.LoggingAdapter;
 import akka.japi.pf.ReceiveBuilder;
 
@@ -14,6 +15,7 @@ public class CashingActor extends AbstractActor {
     @Override
     public Receive createReceive() {
 //        return null;
-        return ReceiveBuilder.create().match(String.class, msg -> sender().tell(cash.getOrDefault(msg,float( -1.0) )))
+        return ReceiveBuilder.create().match(String.class, msg -> sender().tell(cash.getOrDefault(msg,float( -1.0) ),
+        ActorRef))
     }
 }
