@@ -15,14 +15,15 @@ import java.util.List;
 public class RouterActor extends AbstractActor {
     private LoggingAdapter log;
     private Router router;
+    private ActorRef storage;
 
     public RouterActor() {
         this.log = Logging.getLogger(getContext().getSystem(), self());
 
 
-        storage = getContext().actorOf(Props.create(StorageActor.class), STORAGE_NAME);
+        storage = getContext().actorOf(Props.create(StoreActor.class), "storageN");
         getContext().watch(storage);
-        
+
         List<Routee> routees = new ArrayList<>();
         int n = 3;
         for (int i = 0 ; i < n ; i++) {
