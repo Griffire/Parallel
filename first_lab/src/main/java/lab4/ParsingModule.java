@@ -6,6 +6,7 @@ import akka.http.javadsl.marshallers.jackson.Jackson;
 import akka.pattern.Patterns;
 import okio.Timeout;
 
+import java.time.Duration;
 import java.util.concurrent.Future;
 import java.util.regex.Pattern;
 
@@ -22,7 +23,7 @@ public class ParsingModule {
 
     public Route newRouter (){
         Route r;
-        Timeout t1 = 
+        Timeout t1 = Timeout.create(Duration.ofSeconds(5));
         r = get(()-> parameter("", (p) -> {
             Future<Object> f = Patterns.ask(this.router, , t)
         }) )
