@@ -21,7 +21,7 @@ public class ParseApp {
         Http http = Http.get(s1);
         ParsingModule PM = new ParsingModule(r1Actor);
 
-        Flow<HttpRequest, HttpResponse,NotUsed> r1Flow = PM.newRouter().flow()
+        Flow<HttpRequest, HttpResponse,NotUsed> r1Flow = PM.newRouter().flow(s1,)
 
     }
 }
