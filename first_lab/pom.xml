@@ -29,7 +29,7 @@
         </dependencies>
     </dependencyManagement>
 
-    
+
     <dependencies>
         <dependency>
             <groupId>com.typesafe.akka</groupId>
