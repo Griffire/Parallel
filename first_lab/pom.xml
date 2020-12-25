@@ -36,6 +36,15 @@
             <scope>test</scope>
         </dependency>
 
+
+        <dependency>
+            <groupId>com.typesafe.akka</groupId>
+            <artifactId>akka-http-bom_${scala.binary.version}</artifactId>
+            <version>${akka.http.version}</version>
+            <type>pom</type>
+            <scope>import</scope>
+        </dependency>
+        
         <dependency>
             <groupId>com.typesafe.akka</groupId>
             <artifactId>akka-stream_${scala.binary.version}</artifactId>
