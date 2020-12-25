@@ -28,7 +28,7 @@ public class ExecActor extends AbstractActor {
                 return String.format("%s: FAIL, expected: %s, got: %s", msg.getTestName(), msg.getTestExResult(), result);
     }
 
-    private void send(MessageP msg){
+    private void send(executeMSG msg){
         sender().tell(new MessageP(msg.getIdS(),execute(msg)), getContext().parent());
     }
 
