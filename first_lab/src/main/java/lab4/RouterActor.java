@@ -35,14 +35,13 @@ public class RouterActor extends AbstractActor {
 
     }
 
-    private String executeTests(dataP msg) {
+    private  executeTests(dataP msg) {
         ActorSystem s2 = ActorSystem.create("Execute");
         for (testP i : msg.getTests()) {
             router.route( new executeMSG(i.getParams(),msg.getIdS(),msg.getFunction(),msg.getJsS(),i.getTestName(),i.getTestExResult()),
                     storage);
 
         }
-
     }
 
 
