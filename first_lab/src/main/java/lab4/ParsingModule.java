@@ -5,7 +5,6 @@ import akka.http.javadsl.model.ws.Message;
 import akka.http.javadsl.server.Route;
 import akka.http.javadsl.marshallers.jackson.Jackson;
 import akka.pattern.Patterns;
-import okio.Timeout;
 
 import java.time.Duration;
 import java.util.concurrent.CompletionStage;
@@ -14,6 +13,8 @@ import java.util.regex.Pattern;
 
 import static akka.http.javadsl.server.Directives.*;
 
+import akka.util.Timeout;
+import lab4.MessageP;
 
 public class ParsingModule {
     private  ActorRef router;
@@ -26,11 +27,10 @@ public class ParsingModule {
     public Route newRouter (){
         Route r;
         Duration t1 = Duration.ofSeconds(5);
-        CompletionStage tt =;
-
-        Future<Object> yy =
+        Timeout t2 = Timeout.create(t1);
+        Future<Object> yy = Patterns.as
         r = get(()-> parameter("", (p) -> {
-            Future<Object> f = Patterns.ask(this.router,new Message(p) , t1);
+            Future<Object> f = Patterns.ask(this.router,new MessageP(p) , t2);
             return  completeOKWithFuture(f,Jackson.marshaller());
         })),
 

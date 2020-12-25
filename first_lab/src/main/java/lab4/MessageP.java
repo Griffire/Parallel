@@ -4,6 +4,6 @@ public class MessageP {
     private String idS;
 
     MessageP(String idS){
-        
+        this.idS = idS;
     }
 }
