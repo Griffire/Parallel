@@ -17,6 +17,9 @@ public class ExecActor extends AbstractActor {
         Invocable in = (Invocable) e;
         String result = in.invokeFunction(msg.getFunction(), msg.getParams().toArray()).toString();
 
+        catch (Exception e) {
+            return String.format("%s: ERROR, %s", r.getTestName(), e.toString());
+        }
     }
 
     private void send(MessageP msg){
