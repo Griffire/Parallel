@@ -16,6 +16,6 @@ public class ParsingModule {
 
     public Route newRouter (){
         Route r;
-        r =
+        r = get()
     }
 }
