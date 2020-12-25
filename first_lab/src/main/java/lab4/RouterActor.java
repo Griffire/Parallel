@@ -12,6 +12,8 @@ import akka.routing.BalancingPool;
 public class RouterActor extends AbstractActor {
     private final LoggingAdapter log = Logging.getLogger(getContext().getSystem(), self());
 
+    public RouterActor 
+
     private String executeTests(dataP msg) {
         ActorSystem s2 = ActorSystem.create("Execute");
         for (testP i : msg.getTests()) {
