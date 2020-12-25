@@ -35,7 +35,7 @@ public class ExecActor extends AbstractActor {
     @Override
     public Receive createReceive() {
         return ReceiveBuilder.create()
-                .match(MessageP.class, this::send)
+                .match(executeMSG.class, this::send)
                 .matchAny(o -> log.info("unknown res"))
                 .build();    }
 }
