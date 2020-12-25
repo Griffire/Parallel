@@ -8,8 +8,7 @@ import akka.routing.RouterActor;
 public class ParseApp {
 
     public static void main(String[] args) throws Exception{
-
-        Actorsystem s1 = ActorSystem.create("test1");
+        ActorSystem s1 = ActorSystem.create("test1");
         ActorRef routerActor = s1.actorOf(Props.create(RouterActor.class), "");
 
     }
