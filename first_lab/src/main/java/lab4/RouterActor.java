@@ -1,6 +1,7 @@
 package lab4;
 
 import akka.actor.AbstractActor;
+import akka.actor.ActorRef;
 import akka.actor.ActorSystem;
 import akka.japi.pf.ReceiveBuilder;
 import akka.event.Logging;
@@ -11,7 +12,7 @@ public class RouterActor extends AbstractActor {
 
     private String executeTests(dataP msg) {
         ActorSystem s2 = ActorSystem.create("Execute");
-        ActorRef
+        ActorRef exAct 
 
     }
 
