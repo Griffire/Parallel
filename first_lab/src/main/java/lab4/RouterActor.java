@@ -21,8 +21,8 @@ public class RouterActor extends AbstractActor {
 
     public RouterActor() {
         this.log = Logging.getLogger(getContext().getSystem(), self());
-        List<Routee> routees = new ArrayList<Routee>();
-        
+        List<Routee> routees = new ArrayList<>();
+
         this.router = new Router(new RoundRobinRoutingLogic(), routees);
 
     }
