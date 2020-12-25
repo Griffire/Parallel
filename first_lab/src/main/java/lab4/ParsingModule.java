@@ -29,7 +29,7 @@ public class ParsingModule {
             return  completeOKWithFuture(f,Jackson.marshaller());
         }));
 
-        r2 = post(() -> entity(Jackson.unmarshaller(MessageP.class), msg -> {
+        r2 = post(() -> entity(Jackson.unmarshaller(dataP.class), msg -> {
             router.tell(msg, ActorRef.noSender());
             return complete("ok");
         }));
