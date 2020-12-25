@@ -8,8 +8,8 @@ import akka.event.LoggingAdapter;
 public class RouterActor extends AbstractActor {
     private final LoggingAdapter log = Logging.getLogger(getContext().getSystem(), self());
 
-    private String executeTests( msg) {
-    }
+    private String executeTests(dataP msg) {
+    
     }
 
 
