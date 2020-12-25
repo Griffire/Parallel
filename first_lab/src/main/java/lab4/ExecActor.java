@@ -1,4 +1,4 @@
 package lab4;
 
-public class ExecActor {
+public class ExecActor extends   {
 }
