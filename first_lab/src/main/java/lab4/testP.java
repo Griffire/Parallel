@@ -6,7 +6,7 @@ import java.util.ArrayList;
 
 public class testP {
     private String testName, testExResult;
-    private ArrayList<Integer> params;
+    private ArrayList<Object> params;
 
     public String getTestName() {
         return this.testName;
