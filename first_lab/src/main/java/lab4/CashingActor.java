@@ -2,6 +2,7 @@ package lab4;
 
 import akka.actor.AbstractActor;
 import akka.event.LoggingAdapter;
+import akka.japi.pf.ReceiveBuilder;
 
 import java.util.HashMap;
 import java.util.Map;
@@ -13,6 +14,6 @@ public class CashingActor extends AbstractActor {
     @Override
     public Receive createReceive() {
 //        return null;
-        return 
+        return ReceiveBuilder
     }
 }
