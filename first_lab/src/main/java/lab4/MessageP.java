@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class MessageP {
     private final String idS;
+    
 
     public String getIdS() {
         return idS;
