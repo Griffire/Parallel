@@ -5,8 +5,7 @@ import com.fasterxml.jackson.annotation.JsonCreator;
 import java.util.ArrayList;
 
 public class testP {
-    private String testName;
-    private String testExResult;
+    private String testName, testExResult;
     private ArrayList<Integer> params;
 
     public String getTestName() {
