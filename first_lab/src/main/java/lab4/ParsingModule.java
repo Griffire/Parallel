@@ -2,6 +2,8 @@ package lab4;
 
 import akka.actor.ActorRef;
 import akka.http.javadsl.server.Route;
+import akka.http.javadsl.marshallers.jackson.Jackson;
+
 
 public class ParsingModule {
     private  ActorRef router;
@@ -13,6 +15,6 @@ public class ParsingModule {
 
     public Route newRouter (){
         Route r;
-        r = 
+        r =
     }
 }
