@@ -2,5 +2,5 @@ package lab4;
 
 public class ParsingModule {
 
-    public  
+    public class ParsingModule
 }
