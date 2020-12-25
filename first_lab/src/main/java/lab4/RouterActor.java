@@ -21,7 +21,7 @@ public class RouterActor extends AbstractActor {
 
         public Receive createReceive() {
         return ReceiveBuilder.create()
-                .match(dataP.class, msg -> sender().tell(executeTests(msg), self()))
+                .match(dataP.class, this::executeTests)
                 .match(MessageP.class, id -> sender().tell(id, self()))
                 .matchAny(o -> log.info("recieved unknown message"))
                 .build();
