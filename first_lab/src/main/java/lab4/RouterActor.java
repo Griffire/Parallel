@@ -22,7 +22,7 @@ public class RouterActor extends AbstractActor {
     public RouterActor() {
         this.log = Logging.getLogger(getContext().getSystem(), self());
         List<Routee> routees = new ArrayList<>();
-
+        ActorRef r = getContext().actorOf(Props.create(ExecuteActor.class));
         this.router = new Router(new RoundRobinRoutingLogic(), routees);
 
     }
