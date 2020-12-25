@@ -10,11 +10,11 @@ import java.util.Map;
 
 public class StoreActor extends AbstractActor {
     private LoggingAdapter log;
-    private Map<String, ArrayList<String>> actorStorage = new HashMap<>();
+    private Map<String, ArrayList<String>> actorStorage;
 
 
-    public StoreActor(LoggingAdapter log, Map<String, ArrayList<String>> actorStorage) {
+    public StoreActor() {
         this.log = Logging.getLogger(getContext().getSystem(), self());;
-        this.actorStorage = actorStorage;
+        this.actorStorage =  new HashMap<>();
     }
 }
