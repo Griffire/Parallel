@@ -21,6 +21,7 @@ import java.util.concurrent.CompletionStage;
 public class ParseApp {
 
     public static void main(String[] args) throws Exception{
+        System.out.println("Begin");
         ActorSystem s1 = ActorSystem.create("test1");
         ActorRef r1Actor = s1.actorOf(Props.create(RouterActor.class), "Router1");
         Http http = Http.get(s1);
