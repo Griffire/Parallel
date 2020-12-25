@@ -9,7 +9,10 @@ import akka.japi.pf.ReceiveBuilder;
 public class ExecActor extends AbstractActor {
 
 
-    
+    private String execute(executeMSG msg) {
+
+    }
+
     private void send(MessageP msg){
         sender().tell(new MessageP(msg.getIdS(),actorStorage.get(msg.getIdS())), getContext().parent());
     }
