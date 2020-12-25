@@ -5,6 +5,7 @@ public class MessageP {
 
     MessageP(String idS, ArrayList<TestData> tests){
         this.idS = idS;
+        this.tests = tests;
     }
 
 
