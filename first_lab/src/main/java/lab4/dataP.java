@@ -9,7 +9,7 @@ import java.util.ArrayList;
 public class dataP {
     @JsonProperty("idS") String idS;
 
-    @JsonCreator dataP(String idS){
+    @JsonCreator dataP(String idS, ArrayList<testP> tests){
         this.idS = idS;
     }
 
