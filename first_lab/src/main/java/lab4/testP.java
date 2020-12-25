@@ -9,6 +9,18 @@ public class testP {
     private String testExResult;
     private ArrayList<Integer> params;
 
+    public String getTestName() {
+        return testName;
+    }
+
+    public String getTestExResult() {
+        return testExResult;
+    }
+
+    public ArrayList<Integer> getParams() {
+        return params;
+    }
+
     @JsonCreator
     public  testP(String testName,String testExResult, ArrayList<Integer> params){
         this.testName = testName;
