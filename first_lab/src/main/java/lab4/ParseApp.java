@@ -25,10 +25,10 @@ public class ParseApp {
 
 
     public static void main(String[] args) throws Exception{
-        System.out.println("begin");
         ActorSystem s1 = ActorSystem.create("test1");
-        ActorRef r1Actor = s1.actorOf(Props.create(RouterActor.class), "Router1");
         LoggingAdapter log = Logging.getLogger(s1, System.out);
+        log.info("Server start");
+        ActorRef r1Actor = s1.actorOf(Props.create(RouterActor.class), "Router1");
         log.info("Server online ");
 
 
