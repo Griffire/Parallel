@@ -12,14 +12,16 @@ public class ExecActor extends AbstractActor {
 
 
     private String execute(executeMSG msg) {
+        String result;
+        try {
         ScriptEngine e = new ScriptEngineManager().getEngineByName("nashorn");
         e.eval(msg.getJsS());
         Invocable in = (Invocable) e;
-        String result = in.invokeFunction(msg.getFunction(), msg.getParams().toArray()).toString();
-
+        result = in.invokeFunction(msg.getFunction(), msg.getParams().toArray()).toString();
         catch (Exception e) {
             return String.format("%s: ERROR, %s", r.getTestName(), e.toString());
         }
+        
     }
 
     private void send(MessageP msg){
