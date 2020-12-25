@@ -31,6 +31,6 @@ public class ParseApp {
 
 
         System.in.read();
-        binding.thenCompose(ServerBinding::unbind).thenAccept(unbound -> system.terminate());
+        sBind.thenCompose(ServerBinding::unbind).thenAccept(unbound -> s1.terminate());
     }
 }
