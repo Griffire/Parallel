@@ -29,7 +29,7 @@ public class ExecActor extends AbstractActor {
     }
 
     private void send(MessageP msg){
-        sender().tell(new MessageP(msg.getIdS(),actorStorage.get(msg.getIdS())), getContext().parent());
+        sender().tell(new MessageP(msg.getIdS(),execute(msg.getIdS())), getContext().parent());
     }
 
     @Override
