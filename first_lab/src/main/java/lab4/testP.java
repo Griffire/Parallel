@@ -7,5 +7,6 @@ public class testP {
     private String testExResult;
     private ArrayList<Integer> params;
 
+    @JsonCreator
 
 }
