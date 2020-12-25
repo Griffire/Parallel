@@ -33,7 +33,7 @@ public class ParsingModule {
             Future<Object> f = Patterns.ask(this.router, new MessageP(p), t2);
             return  completeOKWithFuture(f,Jackson.marshaller());
         })),
-                post(() -> entity(Jackson.unmarshaller(PackageData.class), msg -> {
+                post(() -> entity(Jackson.unmarshaller(pp.class), msg -> {
             router.tell(msg, ActorRef.noSender());
             return complete("ok");
         }))
