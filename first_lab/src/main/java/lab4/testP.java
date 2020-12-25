@@ -16,12 +16,12 @@ public class testP {
         return this.testExResult;
     }
 
-    public ArrayList<Integer> getParams() {
+    public ArrayList<Object> getParams() {
         return this.params;
     }
 
     @JsonCreator
-    public  testP(String testName,String testExResult, ArrayList<Integer> params){
+    public  testP(String testName,String testExResult, ArrayList<Object> params){
         this.testName = testName;
         this.testExResult = testExResult;
         this.params = params;
