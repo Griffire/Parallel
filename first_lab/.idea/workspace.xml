@@ -23,7 +23,7 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="10c591c7-509c-4051-b43c-28edb083abaf" name="Default Changelist" comment="">
-      <change beforePath="$PROJECT_DIR$/src/main/java/lab4/StoreActor.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lab4/StoreActor.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/lab4/MessageP.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/lab4/MessageP.java" afterDir="false" />
     </list>
     <ignored path="$PROJECT_DIR$/classes/" />
     <ignored path="$PROJECT_DIR$/target/" />
@@ -38,15 +38,17 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file pinned="false" current-in-tab="false">
+      <file pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/main/java/lab4/MessageP.java">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="255">
-              <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+            <state relative-caret-position="435">
+              <caret line="29" column="43" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
               <folding>
                 <element signature="e#126#127#0" expanded="true" />
                 <element signature="e#152#153#0" expanded="true" />
+                <element signature="e#276#277#0" expanded="true" />
                 <element signature="e#302#303#0" expanded="true" />
+                <element signature="e#559#560#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -136,15 +138,15 @@
           </provider>
         </entry>
       </file>
-      <file pinned="false" current-in-tab="true">
+      <file pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/main/java/lab4/StoreActor.java">
           <provider selected="true" editor-type-id="text-editor">
             <state relative-caret-position="480">
-              <caret line="32" column="29" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
+              <caret line="32" column="26" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
               <folding>
                 <element signature="imports" expanded="true" />
                 <element signature="e#856#857#0" expanded="true" />
-                <element signature="e#881#882#0" expanded="true" />
+                <element signature="e#891#892#0" expanded="true" />
               </folding>
             </state>
           </provider>
@@ -217,8 +219,8 @@
         <option value="$PROJECT_DIR$/src/main/java/lab4/dataP.java" />
         <option value="$PROJECT_DIR$/src/main/java/lab4/testP.java" />
         <option value="$PROJECT_DIR$/src/main/java/lab4/RouterActor.java" />
-        <option value="$PROJECT_DIR$/src/main/java/lab4/MessageP.java" />
         <option value="$PROJECT_DIR$/src/main/java/lab4/StoreActor.java" />
+        <option value="$PROJECT_DIR$/src/main/java/lab4/MessageP.java" />
       </list>
     </option>
   </component>
@@ -573,26 +575,28 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/lab4/MessageP.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/lab4/StoreActor.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="255">
-          <caret line="17" column="28" selection-start-line="17" selection-start-column="28" selection-end-line="17" selection-end-column="28" />
+        <state relative-caret-position="480">
+          <caret line="32" column="26" selection-start-line="32" selection-start-column="26" selection-end-line="32" selection-end-column="26" />
           <folding>
-            <element signature="e#126#127#0" expanded="true" />
-            <element signature="e#152#153#0" expanded="true" />
-            <element signature="e#302#303#0" expanded="true" />
+            <element signature="imports" expanded="true" />
+            <element signature="e#856#857#0" expanded="true" />
+            <element signature="e#891#892#0" expanded="true" />
           </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/main/java/lab4/StoreActor.java">
+    <entry file="file://$PROJECT_DIR$/src/main/java/lab4/MessageP.java">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="480">
-          <caret line="32" column="29" selection-start-line="32" selection-start-column="29" selection-end-line="32" selection-end-column="29" />
+        <state relative-caret-position="435">
+          <caret line="29" column="43" selection-start-line="29" selection-start-column="43" selection-end-line="29" selection-end-column="43" />
           <folding>
-            <element signature="imports" expanded="true" />
-            <element signature="e#856#857#0" expanded="true" />
-            <element signature="e#881#882#0" expanded="true" />
+            <element signature="e#126#127#0" expanded="true" />
+            <element signature="e#152#153#0" expanded="true" />
+            <element signature="e#276#277#0" expanded="true" />
+            <element signature="e#302#303#0" expanded="true" />
+            <element signature="e#559#560#0" expanded="true" />
           </folding>
         </state>
       </provider>
