@@ -18,5 +18,7 @@ public class StoreActor extends AbstractActor {
         this.actorStorage =  new HashMap<>();
     }
 
-    private void insert()
+    private void insert(MessageP msg){
+        
+    }
 }
