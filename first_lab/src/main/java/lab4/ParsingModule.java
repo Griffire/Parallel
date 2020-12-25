@@ -19,19 +19,20 @@ public class ParsingModule {
     }
 
     public Route newRouter (){
-        Route r;
+        Route r1 , r2;
         Duration t1 = Duration.ofSeconds(5);
         Timeout t2 = Timeout.create(t1);
         MessageP ps= new MessageP("s");
-        var get(()-> parameter("", (p) -> {
+
+        r1 = get(()-> parameter("", (p) -> {
             Future<Object> f = Patterns.ask(this.router, new MessageP(p), t2);
             return  completeOKWithFuture(f,Jackson.marshaller());
         }));
-                post(() -> entity(Jackson.unmarshaller(MessageP.class), msg -> {
+
+        r2 = post(() -> entity(Jackson.unmarshaller(MessageP.class), msg -> {
             router.tell(msg, ActorRef.noSender());
             return complete("ok");
-        }))
-        );
-
+        }));
+        return Route(r1,r2);
     }
 }
