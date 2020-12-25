@@ -10,6 +10,7 @@ import org.apache.http.HttpRequest;
 import org.apache.http.protocol.HTTP;
 import org.spark_project.jetty.http.HttpParser;
 import akka.NotUsed;
+import akka.stream.ActorMaterializer;
 
 
 public class ParseApp {
@@ -19,7 +20,7 @@ public class ParseApp {
         ActorRef r1Actor = s1.actorOf(Props.create(RouterActor.class), "Router1");
         Http http = Http.get(s1);
         ParsingModule PM = new ParsingModule(r1Actor);
-        instance
+        
         Flow<HttpRequest, HttpResponse,NotUsed> r1Flow =
 
     }
