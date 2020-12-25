@@ -13,6 +13,7 @@ import akka.routing.Routee;
 import akka.routing.Router;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class RouterActor extends AbstractActor {
     private LoggingAdapter log;
@@ -21,6 +22,7 @@ public class RouterActor extends AbstractActor {
     public RouterActor() {
         this.log = Logging.getLogger(getContext().getSystem(), self());
         List<Routee> routees = new ArrayList<Routee>();
+        
         this.router = new Router(new RoundRobinRoutingLogic(), routees);
 
     }
