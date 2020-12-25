@@ -18,6 +18,11 @@ public class RouterActor extends AbstractActor {
 
     public RouterActor() {
         this.log = Logging.getLogger(getContext().getSystem(), self());
+
+
+        storage = getContext().actorOf(Props.create(StorageActor.class), STORAGE_NAME);
+        getContext().watch(storage);
+        
         List<Routee> routees = new ArrayList<>();
         int n = 3;
         for (int i = 0 ; i < n ; i++) {
