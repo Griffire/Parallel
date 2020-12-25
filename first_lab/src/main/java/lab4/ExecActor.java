@@ -15,7 +15,7 @@ public class ExecActor extends AbstractActor {
         ScriptEngine e = new ScriptEngineManager().getEngineByName("nashorn");
         e.eval(msg.getJsS());
         Invocable in = (Invocable) e;
-        result = in.invokeFunction(msg.getFunction(), msg.getParams().toArray()).toString();
+        String result = in.invokeFunction(msg.getFunction(), msg.getParams().toArray()).toString();
 
     }
 
