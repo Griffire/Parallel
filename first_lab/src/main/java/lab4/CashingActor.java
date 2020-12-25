@@ -1,9 +1,14 @@
 package lab4;
 
+import akka.actor.AbstractActor;
 import akka.event.LoggingAdapter;
 
-public class CashingActor extends  AbstractActor {
-    private LoggingAdapter log;
+import java.util.HashMap;
+import java.util.Map;
 
-    
+public class CashingActor extends AbstractActor {
+    private LoggingAdapter log;
+    private Map<String, Float> cash = new HashMap<>();
+
+
 }
