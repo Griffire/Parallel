@@ -13,6 +13,11 @@ public class StoreActor extends AbstractActor {
     private Map<String, ArrayList<String>> actorStorage;
 
 
+    @Override
+    public Receive createReceive() {
+        return null;
+    }
+
     public StoreActor() {
         this.log = Logging.getLogger(getContext().getSystem(), self());;
         this.actorStorage =  new HashMap<>();
