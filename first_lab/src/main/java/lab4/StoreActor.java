@@ -26,7 +26,10 @@ public class StoreActor extends AbstractActor {
             results = new ArrayList<>();
             results.add(msg.getRes());
             actorStorage.put(msg.getIdS(),results);
-
         }
+    }
+
+    private void send(){
+        
     }
 }
