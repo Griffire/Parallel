@@ -34,13 +34,7 @@
             <version>${akka.version}</version>
             <scope>test</scope>
         </dependency>
-        <dependency>
-            <groupId>junit</groupId>
-            <artifactId>junit</artifactId>
-            <version>4.13.1</version>
-            <scope>test</scope>
-        </dependency>
-
+        
         <dependency>
             <groupId>com.typesafe.akka</groupId>
             <artifactId>akka-stream_${scala.binary.version}</artifactId>
