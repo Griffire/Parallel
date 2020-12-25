@@ -10,7 +10,7 @@ public class dataP {
     @JsonProperty("idS") String idS;
 
     @JsonCreator dataP(String idS){
-        
+        this.idS = idS;
     }
 
 }
