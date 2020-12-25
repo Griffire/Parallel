@@ -14,7 +14,7 @@ public class RouterActor extends AbstractActor {
 
     private String executeTests(dataP msg) {
         ActorSystem s2 = ActorSystem.create("Execute");
-        ActorRef exAct = s2.actorOf(new BalancingPool(4).props(Props.create()))
+        ActorRef exAct = s2.actorOf(new BalancingPool(4).props(Props.create(Exe)))
 
     }
 
