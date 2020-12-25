@@ -3,6 +3,7 @@ package lab4;
 import akka.actor.*;
 import akka.http.*;
 import akka.http.javadsl.Http;
+import akka.http.javadsl.model.HttpResponse;
 import akka.routing.RouterActor;
 import akka.stream.javadsl.Flow;
 import org.apache.http.HttpRequest;
@@ -17,7 +18,7 @@ public class ParseApp {
         ActorRef r1Actor = s1.actorOf(Props.create(RouterActor.class), "Router1");
         Http http = Http.get(s1);
         ParsingModule PM = new ParsingModule(r1Actor);
-        Flow<HttpRequest, >
+        Flow<HttpRequest, HttpResponse, >
 
     }
 }
