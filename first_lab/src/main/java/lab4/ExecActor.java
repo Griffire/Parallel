@@ -21,7 +21,10 @@ public class ExecActor extends AbstractActor {
         catch (Exception e) {
             return String.format("%s: ERROR, %s", r.getTestName(), e.toString());
         }
-        
+            if (result.equals(msg.getTestExResult()))
+                return String.format("%s: OK, result: %s", msg.getTestName(), result);
+            else
+                return String.format("%s: FAIL, expected: %s, got: %s", msg.getTestName(), msg.getTestExResult(), result);
     }
 
     private void send(MessageP msg){
