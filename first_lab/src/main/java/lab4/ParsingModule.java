@@ -4,6 +4,8 @@ import akka.actor.ActorRef;
 import akka.http.javadsl.server.Route;
 
 public class ParsingModule {
+    private  ActorRef router;
+
 
     ParsingModule(ActorRef router) {
         this.router = router;
