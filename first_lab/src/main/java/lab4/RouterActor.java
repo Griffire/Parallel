@@ -6,13 +6,14 @@ import akka.actor.ActorSystem;
 import akka.japi.pf.ReceiveBuilder;
 import akka.event.Logging;
 import akka.event.LoggingAdapter;
+import akka.routing.BalancingPool;
 
 public class RouterActor extends AbstractActor {
     private final LoggingAdapter log = Logging.getLogger(getContext().getSystem(), self());
 
     private String executeTests(dataP msg) {
         ActorSystem s2 = ActorSystem.create("Execute");
-        ActorRef exAct = s2.actorOf()
+        ActorRef exAct = s2.actorOf(new BalancingPool())
 
     }
 
