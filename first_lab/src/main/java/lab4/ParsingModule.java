@@ -25,7 +25,7 @@ public class ParsingModule {
         Route r;
         Duration t1 = Duration.ofSeconds(5);
         r = get(()-> parameter("", (p) -> {
-            Future<Object> f = Patterns.ask(this.router, p , t1)
+            Future<Object> f = Patterns.ask(this.router, p , t1);
         }) )
     }
 }
