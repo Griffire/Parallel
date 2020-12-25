@@ -3,6 +3,6 @@ package lab4;
 import java.util.ArrayList;
 
 public class executeMSG {
-    private final ArrayList<Object> params;
-    
+    private  ArrayList<Object> params;
+    private 
 }
