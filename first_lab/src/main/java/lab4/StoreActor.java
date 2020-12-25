@@ -17,4 +17,6 @@ public class StoreActor extends AbstractActor {
         this.log = Logging.getLogger(getContext().getSystem(), self());;
         this.actorStorage =  new HashMap<>();
     }
+
+    private void insert()
 }
