@@ -3,12 +3,12 @@ package lab4;
 import akka.actor.*;
 import akka.*;
 import akka.routing.RouterActor;
-import system.*;
+
 
 public class ParseApp {
 
     public static void main(String[] args) {
-        ActorSystem s1 = ActorSystem.create("test1");
+        Actorystem s1 = ActorSystem.create("test1");
         ActorRef routerActor = system.actorOf(Props.create(RouterActor.class), "");
 
     }
