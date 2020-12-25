@@ -1,5 +1,5 @@
 package lab4;
 
 public class testP {
-    string 
+    String testName
 }
