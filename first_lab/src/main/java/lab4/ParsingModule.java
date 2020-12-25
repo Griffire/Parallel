@@ -23,6 +23,7 @@ public class ParsingModule {
     ParsingModule(ActorRef router) {
         this.router = router;
     }
+    Jackson.un
 
     public Route newRouter (){
         Route r;
