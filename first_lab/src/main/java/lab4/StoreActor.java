@@ -30,6 +30,6 @@ public class StoreActor extends AbstractActor {
     }
 
     private void send(MessageP msg){
-        sender().tell(new res);
+        sender().tell(new );
     }
 }
