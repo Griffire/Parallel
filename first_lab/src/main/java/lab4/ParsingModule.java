@@ -7,6 +7,7 @@ import akka.pattern.Patterns;
 import okio.Timeout;
 
 import java.time.Duration;
+import java.util.concurrent.CompletionStage;
 import java.util.concurrent.Future;
 import java.util.regex.Pattern;
 
@@ -24,6 +25,8 @@ public class ParsingModule {
     public Route newRouter (){
         Route r;
         Duration t1 = Duration.ofSeconds(5);
+        CompletionStage tt =;
+        Future<Object> yy = Future<Object>
         r = get(()-> parameter("", (p) -> {
             Future<Object> f = Patterns.ask(this.router, p , t1);
             return  completeOKWithFuture(f,Jackson.marshaller());
