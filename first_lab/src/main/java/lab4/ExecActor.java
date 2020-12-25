@@ -14,10 +14,11 @@ public class ExecActor extends AbstractActor {
     private String execute(executeMSG msg) {
         String result;
         try {
-        ScriptEngine e = new ScriptEngineManager().getEngineByName("nashorn");
-        e.eval(msg.getJsS());
-        Invocable in = (Invocable) e;
-        result = in.invokeFunction(msg.getFunction(), msg.getParams().toArray()).toString();
+            ScriptEngine e = new ScriptEngineManager().getEngineByName("nashorn");
+            e.eval(msg.getJsS());
+            Invocable in = (Invocable) e;
+            result = in.invokeFunction(msg.getFunction(), msg.getParams().toArray()).toString();
+        }
         catch (Exception e) {
             return String.format("%s: ERROR, %s", r.getTestName(), e.toString());
         }
