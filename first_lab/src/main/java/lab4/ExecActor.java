@@ -1,6 +1,7 @@
 package lab4;
 
 import akka.actor.AbstractActor;
+import akka.event.LoggingAdapter;
 import akka.japi.pf.ReceiveBuilder;
 
 import javax.script.Invocable;
@@ -9,8 +10,10 @@ import javax.script.ScriptEngineManager;
 
 
 public class ExecActor extends AbstractActor {
+    private LoggingAdapter log;
 
 
+    
     private String execute(executeMSG msg) {
         String result;
         try {
