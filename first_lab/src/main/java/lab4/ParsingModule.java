@@ -23,7 +23,6 @@ public class ParsingModule {
     ParsingModule(ActorRef router) {
         this.router = router;
     }
-    Jackson.un
 
     public Route newRouter (){
         Route r;
@@ -34,7 +33,7 @@ public class ParsingModule {
             Future<Object> f = Patterns.ask(this.router, new MessageP(p), t2);
             return  completeOKWithFuture(f,Jackson.marshaller());
         })),
-                post(() -> entity(Jackson.unmarshaller(pp.class), msg -> {
+                post(() -> entity(Jackson.unmarshaller(), msg -> {
             router.tell(msg, ActorRef.noSender());
             return complete("ok");
         }))
