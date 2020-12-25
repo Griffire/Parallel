@@ -8,7 +8,12 @@ import akka.event.LoggingAdapter;
 public class RouterActor extends AbstractActor {
     private final LoggingAdapter log = Logging.getLogger(getContext().getSystem(), self());
 
-    public Receive createReceive() {
+    private String executeTests(ExecuteMessage msg) {
+    }
+    }
+
+
+        public Receive createReceive() {
         return ReceiveBuilder.create()
                 .match(dataP.class, msg -> sender().tell(executeTests(msg), self()))
                 .match(MessageP.class, id -> sender().tell(id, self()))
