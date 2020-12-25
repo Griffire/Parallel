@@ -33,5 +33,7 @@ public class StoreActor extends AbstractActor {
         sender().tell(new MessageP(msg.getIdS(),actorStorage.get(msg.getIdS())), getContext().parent());
     }
 
-    private recive()
+    private reciveP(){
+        
+    }
 }
