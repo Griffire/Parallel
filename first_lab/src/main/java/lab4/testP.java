@@ -1,5 +1,6 @@
 package lab4;
 
 public class testP {
-    String testName
+    private String testName;
+    private  
 }
