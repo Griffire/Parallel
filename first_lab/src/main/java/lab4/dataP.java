@@ -9,6 +9,8 @@ import java.util.ArrayList;
 public class dataP {
     @JsonProperty("idS") String idS;
 
-    @JsonCreator dataP()
+    @JsonCreator dataP(String idS){
+        
+    }
 
 }
