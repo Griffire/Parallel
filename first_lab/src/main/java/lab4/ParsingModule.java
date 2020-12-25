@@ -23,9 +23,9 @@ public class ParsingModule {
 
     public Route newRouter (){
         Route r;
-        Timeout t1 = Timeout.create(Duration.ofSeconds(5));
+        Duration t1 = Duration.ofSeconds(5);
         r = get(()-> parameter("", (p) -> {
-            Future<Object> f = Patterns.ask(this.router, , t)
+            Future<Object> f = Patterns.ask(this.router, , t1)
         }) )
     }
 }
