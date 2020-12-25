@@ -10,9 +10,17 @@ public class dataP {
     @JsonProperty("idS") String idS;
     @JsonProperty("tests") ArrayList<testP> tests;
 
+
     @JsonCreator dataP(String idS, ArrayList<testP> tests){
         this.idS = idS;
         this.tests = tests;
     }
 
+    String getIdS(){
+        return this.idS;
+    }
+
+    public ArrayList<testP> getTests() {
+        return this.tests;
+    }
 }

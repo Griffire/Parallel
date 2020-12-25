@@ -14,7 +14,7 @@ public class RouterActor extends AbstractActor {
 
     private String executeTests(dataP msg) {
         ActorSystem s2 = ActorSystem.create("Execute");
-        for (i : msg.) {
+        for (i : msg.getTests()) {
 
         }
 
