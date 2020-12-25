@@ -8,9 +8,11 @@ import java.util.ArrayList;
 
 public class dataP {
     @JsonProperty("idS") String idS;
+    private ArrayList<testP> tests;
 
     @JsonCreator dataP(String idS, ArrayList<testP> tests){
         this.idS = idS;
+        this.tests = tests;
     }
 
 }
