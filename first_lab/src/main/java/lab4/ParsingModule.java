@@ -1,6 +1,7 @@
 package lab4;
 
 import akka.actor.ActorRef;
+import akka.http.javadsl.model.ws.Message;
 import akka.http.javadsl.server.Route;
 import akka.http.javadsl.marshallers.jackson.Jackson;
 import akka.pattern.Patterns;
@@ -26,9 +27,10 @@ public class ParsingModule {
         Route r;
         Duration t1 = Duration.ofSeconds(5);
         CompletionStage tt =;
-        Future<Object> yy = Future<Object>
+
+        Future<Object> yy =
         r = get(()-> parameter("", (p) -> {
-            Future<Object> f = Patterns.ask(this.router, p , t1);
+            Future<Object> f = Patterns.ask(this.router,new Message(p) , t1);
             return  completeOKWithFuture(f,Jackson.marshaller());
         })),
 
