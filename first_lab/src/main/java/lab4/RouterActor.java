@@ -8,13 +8,16 @@ import akka.japi.pf.ReceiveBuilder;
 import akka.event.Logging;
 import akka.event.LoggingAdapter;
 import akka.routing.BalancingPool;
+import akka.routing.RoundRobinRoutingLogic;
+import akka.routing.Router;
 
 public class RouterActor extends AbstractActor {
     private LoggingAdapter log;
+    private Router router;
 
     public RouterActor() {
         this.log = Logging.getLogger(getContext().getSystem(), self());
-        router = new Router(new RoundRobinRoutingLogic(), routees);
+        this.router = new Router(new RoundRobinRoutingLogic(), routees);
 
     }
 
