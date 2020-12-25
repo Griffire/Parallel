@@ -4,11 +4,13 @@ import java.util.ArrayList;
 
 public class MessageP {
     private final String idS;
-    private ArrayList<testP> tests;
 
-    MessageP(String idS, ArrayList<testP> tests){
+    public String getIdS() {
+        return idS;
+    }
+
+    MessageP(String idS){
         this.idS = idS;
-        this.tests = tests;
     }
 
 
