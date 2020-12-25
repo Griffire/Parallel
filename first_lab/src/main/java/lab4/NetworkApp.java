@@ -35,6 +35,8 @@ public class NetworkApp {
 
         //System.in.read();
         sBind.thenCompose(ServerBinding::unbind).thenAccept(unbound -> s1.terminate());
-
     }
+
+
+    
 }
