@@ -4,6 +4,7 @@ public class executeTest {
 
     public ExecuteTest(){
         private Test test;
-        private 
+        private String jsPart;
+        
     }
 }
