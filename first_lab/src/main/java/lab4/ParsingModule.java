@@ -33,6 +33,6 @@ public class ParsingModule {
             router.tell(msg, ActorRef.noSender());
             return complete("ok");
         }));
-        return Route(r1,r2);
+        return route(r1,r2);
     }
 }
