@@ -23,17 +23,21 @@ import akka.event.LoggingAdapter;
 
 public class ParseApp {
 
+    
     public static void main(String[] args) throws Exception{
-        System.out.println(123132343);
+        System.out.println("begin");
         ActorSystem s1 = ActorSystem.create("test1");
         ActorRef r1Actor = s1.actorOf(Props.create(RouterActor.class), "Router1");
+        LoggingAdapter log = Logging.getLogger(s1, System.out);
+        log.info("Server online ");
+
+
         Http http = Http.get(s1);
         ParsingModule PM = new ParsingModule(r1Actor);
         Materializer m1 = Materializer.createMaterializer(s1);
         Flow<HttpRequest, HttpResponse,NotUsed> r1Flow = PM.newRouter().flow(s1,m1);
         CompletionStage<ServerBinding> sBind = http.bindAndHandle(r1Flow, ConnectHttp.toHost("localhost:8888"),m1);
-        LoggingAdapter log = Logging.getLogger(s1, System.out);
-        log.info("Server online ");
+
 
         System.in.read();
         sBind.thenCompose(ServerBinding::unbind).thenAccept(unbound -> s1.terminate());
