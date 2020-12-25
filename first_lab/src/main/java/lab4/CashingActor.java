@@ -14,6 +14,6 @@ public class CashingActor extends AbstractActor {
     @Override
     public Receive createReceive() {
 //        return null;
-        return ReceiveBuilder.create().match(String.class, msg -> sender().tell(cash.getOrDefault(msg,)))
+        return ReceiveBuilder.create().match(String.class, msg -> sender().tell(cash.getOrDefault(msg,float( -1.0) )))
     }
 }
