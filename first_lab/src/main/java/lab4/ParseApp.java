@@ -26,6 +26,6 @@ public class ParseApp {
         ParsingModule PM = new ParsingModule(r1Actor);
         Materializer m1 = Materializer.createMaterializer(s1);
         Flow<HttpRequest, HttpResponse,NotUsed> r1Flow = PM.newRouter().flow(s1,m1);
-        CompletionStage<ServerBinding> sBind = http.bin
+        CompletionStage<ServerBinding> sBind = http.bindAndHandle()
     }
 }
