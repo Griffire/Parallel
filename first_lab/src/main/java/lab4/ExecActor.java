@@ -3,15 +3,20 @@ package lab4;
 import akka.actor.AbstractActor;
 import akka.japi.pf.ReceiveBuilder;
 
-
+import javax.script.Invocable;
+import javax.script.ScriptEngine;
+import javax.script.ScriptEngineManager;
 
 
 public class ExecActor extends AbstractActor {
 
 
     private String execute(executeMSG msg) {
-        String result;
-        
+        ScriptEngine e = new ScriptEngineManager().getEngineByName("nashorn");
+        e.eval(msg.getJsS());
+        Invocable in = (Invocable) e;
+        result = in.invokeFunction(msg.getFunction(), msg.getParams().toArray()).toString();
+
     }
 
     private void send(MessageP msg){
