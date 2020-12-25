@@ -1,4 +1,9 @@
 package lab4;
 
-public class CashingActor {
+import akka.event.LoggingAdapter;
+
+public class CashingActor extends  AbstractActor {
+    private LoggingAdapter log;
+
+    
 }
