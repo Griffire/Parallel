@@ -29,7 +29,7 @@ public class StoreActor extends AbstractActor {
         }
     }
 
-    private void send(){
-        
+    private void send(MessageP msg){
+
     }
 }
