@@ -12,8 +12,11 @@ import javax.script.ScriptEngineManager;
 public class ExecActor extends AbstractActor {
     private LoggingAdapter log;
 
+    public ExecActor() {
+        this.log = log;
+    }
 
-    
+
     private String execute(executeMSG msg) {
         String result;
         try {
