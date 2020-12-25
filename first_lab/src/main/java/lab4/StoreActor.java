@@ -38,7 +38,9 @@ public class StoreActor extends AbstractActor {
         sender().tell(new MessageP(msg.getIdS(),actorStorage.get(msg.getIdS())), getContext().parent());
     }
 
-    private createReceive(){
-
+    @Override
+    public Receive createReceive() {
+        return null;
     }
+
 }
