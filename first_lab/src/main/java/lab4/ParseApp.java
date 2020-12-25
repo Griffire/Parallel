@@ -6,5 +6,7 @@ import akka.*;
 
 public class ParseApp {
 
-
+    public static void main(String[] args) {
+        
+    }
 }
