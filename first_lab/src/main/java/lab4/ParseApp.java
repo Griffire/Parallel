@@ -5,6 +5,7 @@ import akka.http.*;
 import akka.http.javadsl.Http;
 import akka.routing.RouterActor;
 import akka.stream.javadsl.Flow;
+import org.apache.http.HttpRequest;
 import org.apache.http.protocol.HTTP;
 import org.spark_project.jetty.http.HttpParser;
 
@@ -16,7 +17,7 @@ public class ParseApp {
         ActorRef r1Actor = s1.actorOf(Props.create(RouterActor.class), "Router1");
         Http http = Http.get(s1);
         ParsingModule PM = new ParsingModule(r1Actor);
-        Flow<Http >
+        Flow<HttpRequest, >
 
     }
 }
