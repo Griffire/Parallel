@@ -24,7 +24,7 @@ public class StoreActor extends AbstractActor {
             results.add(msg.getRes());
         } else {
             results.add(msg.getRes());
-            actorStorage.put(msg.getIdS(),msg.getRes());
+            actorStorage.put(msg.getIdS(),results);
 
         }
     }
