@@ -5,6 +5,7 @@ import akka.http.javadsl.server.Route;
 import akka.http.javadsl.marshallers.jackson.Jackson;
 
 import java.util.concurrent.Future;
+import java.util.regex.Pattern;
 
 import static akka.http.javadsl.server.Directives.*;
 
@@ -20,7 +21,7 @@ public class ParsingModule {
     public Route newRouter (){
         Route r;
         r = get(()-> parameter("", (p) -> {
-            Future<Object> f = 
+            Future<Object> f = Pattern
         }) )
     }
 }
