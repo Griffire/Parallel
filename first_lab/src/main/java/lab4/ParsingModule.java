@@ -3,6 +3,7 @@ package lab4;
 import akka.actor.ActorRef;
 import akka.http.javadsl.server.Route;
 import akka.http.javadsl.marshallers.jackson.Jackson;
+import static akka.http.javadsl.server.Directives.*;
 
 
 public class ParsingModule {
