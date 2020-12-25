@@ -1,14 +1,5 @@
-lab4/ParseApp.class
-lab1/WordMapper.class
-lab4/MessageP.class
-lab2/AirportNameMapper.class
-lab4/dataP.class
-lab2/AirportApp.class
-lab2/AirportMapper.class
-lab4/ParsingModule.class
-lab2/AirportWritableComparable.class
-lab2/AirportPartitioner.class
 lab1/WordReducer.class
 lab1/WordCountApp.class
-lab2/GroupComparator.class
-lab2/AirportReducer.class
+lab2/AirportApp.class
+lab4/executeMSG.class
+lab2/AirportWritableComparable.class
