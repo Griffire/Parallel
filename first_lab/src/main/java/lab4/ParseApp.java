@@ -24,7 +24,7 @@ import akka.event.LoggingAdapter;
 public class ParseApp {
 
 
-    public static void main(String[] args) throws Exception{
+    public static void main(String[] args) {
         ActorSystem s1 = ActorSystem.create("test1");
         LoggingAdapter log = Logging.getLogger(s1, System.out);
         log.info("Server start");
