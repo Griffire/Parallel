@@ -1,6 +1,7 @@
 package lab4;
 
 import akka.actor.AbstractActor;
+import akka.actor.typed.javadsl.*;
 
 public class RouterActor extends AbstractActor {
     public Receive createReceive() {
