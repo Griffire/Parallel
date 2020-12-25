@@ -7,6 +7,6 @@ public class ParseApp {
 
     public static void main(String[] args) {
         ActorSystem s1 = ActorSystem.create("test1");
-
+        ActorRef routerActor = system.actorOf(Props.create(RouterActor.class), "router");
     }
 }
