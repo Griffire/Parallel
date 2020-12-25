@@ -23,7 +23,7 @@ public class ParsingModule {
         Duration t1 = Duration.ofSeconds(5);
         Timeout t2 = Timeout.create(t1);
         MessageP ps= new MessageP("s");
-        r = get(()-> parameter("", (p) -> {
+        var get(()-> parameter("", (p) -> {
             Future<Object> f = Patterns.ask(this.router, new MessageP(p), t2);
             return  completeOKWithFuture(f,Jackson.marshaller());
         }));
