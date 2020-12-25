@@ -39,7 +39,7 @@ public class ParseApp {
         CompletionStage<ServerBinding> sBind = http.bindAndHandle(r1Flow, ConnectHttp.toHost("localhost:8888"),m1);
 
 
-        System.in.read();
+        //System.in.read();
         sBind.thenCompose(ServerBinding::unbind).thenAccept(unbound -> s1.terminate());
     }
 }
