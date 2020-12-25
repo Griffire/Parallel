@@ -28,5 +28,6 @@ public class ParseApp {
         Materializer m1 = Materializer.createMaterializer(s1);
         Flow<HttpRequest, HttpResponse,NotUsed> r1Flow = PM.newRouter().flow(s1,m1);
         CompletionStage<ServerBinding> sBind = http.bindAndHandle(r1Flow, ConnectHttp.toHost("localhost:8888"),m1);
+        
     }
 }
