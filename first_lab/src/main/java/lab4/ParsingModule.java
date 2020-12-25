@@ -19,6 +19,7 @@ public class ParsingModule {
     }
 
     public Route newRouter (){
+        System.out.println("router");
         Route r1 , r2;
         Duration t1 = Duration.ofSeconds(5);
         Timeout t2 = Timeout.create(t1);
