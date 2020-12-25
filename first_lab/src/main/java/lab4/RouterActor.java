@@ -10,7 +10,8 @@ public class RouterActor extends AbstractActor {
     private final LoggingAdapter log = Logging.getLogger(getContext().getSystem(), self());
 
     private String executeTests(dataP msg) {
-        ActorSystem system = ActorSystem.create("Execute");
+        ActorSystem s2 = ActorSystem.create("Execute");
+        
 
     }
 
