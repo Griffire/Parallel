@@ -10,15 +10,15 @@ public class testP {
     private ArrayList<Integer> params;
 
     public String getTestName() {
-        return testName;
+        return this.testName;
     }
 
     public String getTestExResult() {
-        return testExResult;
+        return this.testExResult;
     }
 
     public ArrayList<Integer> getParams() {
-        return params;
+        return this.params;
     }
 
     @JsonCreator
