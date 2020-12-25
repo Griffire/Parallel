@@ -1,5 +1,6 @@
 package lab4;
 import akka.actor.AbstractActor;
+import akka.event.Logging;
 import akka.event.LoggingAdapter;
 
 import java.util.ArrayList;
@@ -13,7 +14,7 @@ public class StoreActor extends AbstractActor {
 
 
     public StoreActor(LoggingAdapter log, Map<String, ArrayList<String>> actorStorage) {
-        this.log = log;
+        this.log = Logging.getLogger(getContext().getSystem(), self());;
         this.actorStorage = actorStorage;
     }
 }
