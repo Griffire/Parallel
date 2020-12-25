@@ -5,7 +5,7 @@
     <modelVersion>4.0.0</modelVersion>
 
     <groupId>akka-examples</groupId>
-    <artifactId>spark-examples</artifactId>
+    <artifactId>akka-examples</artifactId>
     <version>1.0-SNAPSHOT</version>
     <dependencies>
         <dependency>
