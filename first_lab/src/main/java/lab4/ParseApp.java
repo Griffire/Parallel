@@ -2,6 +2,7 @@ package lab4;
 
 import akka.actor.*;
 import akka.http.*;
+import akka.http.javadsl.ConnectHttp;
 import akka.http.javadsl.Http;
 import akka.http.javadsl.ServerBinding;
 import akka.http.javadsl.model.HttpRequest;
@@ -26,6 +27,6 @@ public class ParseApp {
         ParsingModule PM = new ParsingModule(r1Actor);
         Materializer m1 = Materializer.createMaterializer(s1);
         Flow<HttpRequest, HttpResponse,NotUsed> r1Flow = PM.newRouter().flow(s1,m1);
-        CompletionStage<ServerBinding> sBind = http.bindAndHandle(r1Flow,)
+        CompletionStage<ServerBinding> sBind = http.bindAndHandle(r1Flow, ConnectHttp.toHost())
     }
 }
