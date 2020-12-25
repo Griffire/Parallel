@@ -1,6 +1,7 @@
 package lab4;
 
 import akka.actor.AbstractActor;
+import akka.event.Logging;
 import akka.event.LoggingAdapter;
 import akka.japi.pf.ReceiveBuilder;
 
@@ -13,7 +14,7 @@ public class ExecActor extends AbstractActor {
     private LoggingAdapter log;
 
     public ExecActor() {
-        this.log = log;
+        this.log = Logging.getLogger(getContext().getSystem(), self());;
     }
 
 
@@ -26,7 +27,7 @@ public class ExecActor extends AbstractActor {
             result = in.invokeFunction(msg.getFunction(), msg.getParams().toArray()).toString();
         }
         catch (Exception e) {
-            return String.format("%s: ERROR, %s", r.getTestName(), e.toString());
+            return String.format("%s: ERROR, %s", msg.getTestName(), e.toString());
         }
             if (result.equals(msg.getTestExResult()))
                 return String.format("%s: OK, result: %s", msg.getTestName(), result);
