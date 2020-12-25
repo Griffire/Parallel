@@ -7,10 +7,7 @@ import akka.actor.Props;
 import akka.japi.pf.ReceiveBuilder;
 import akka.event.Logging;
 import akka.event.LoggingAdapter;
-import akka.routing.BalancingPool;
-import akka.routing.RoundRobinRoutingLogic;
-import akka.routing.Routee;
-import akka.routing.Router;
+import akka.routing.*;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -22,7 +19,10 @@ public class RouterActor extends AbstractActor {
     public RouterActor() {
         this.log = Logging.getLogger(getContext().getSystem(), self());
         List<Routee> routees = new ArrayList<>();
+        
         ActorRef r = getContext().actorOf(Props.create(ExecuteActor.class));
+        getContext().watch(r);
+        routees.add(new ActorRefRoutee(r));
         this.router = new Router(new RoundRobinRoutingLogic(), routees);
 
     }
