@@ -19,6 +19,12 @@ import akka.stream.javadsl.Flow;
 import java.util.concurrent.CompletionStage;
 
 public class NetworkApp {
+
+    static Flow<HttpRequest, HttpResponse, NotUsed> createFlow(ActorMaterializer m1, ActorRef act){
+
+    }
+
+
     public static void main(String[] args) {
         ActorSystem s1 = ActorSystem.create("test4");
         LoggingAdapter log = Logging.getLogger(s1, System.out);
@@ -31,7 +37,7 @@ public class NetworkApp {
         ParsingModule PM = new ParsingModule(r1Actor);
         Materializer m1 = Materializer.createMaterializer(s1);
 //        Flow<HttpRequest, HttpResponse, NotUsed> r1Flow = PM.newRouter().flow(s1,m1);
-        Flow<HttpRequest, HttpResponse, NotUsed> r1Flow = createFlow(m1, cashingActor);
+        Flow<HttpRequest, HttpResponse, NotUsed> r1Flow = createFlow(m1, CashingActor);
         CompletionStage<ServerBinding> sBind = http.bindAndHandle(r1Flow, ConnectHttp.toHost("localhost:8888"),m1);
 
 
@@ -40,9 +46,7 @@ public class NetworkApp {
     }
 
 
-    Flow<HttpRequest, HttpResponse, NotUsed> createFlow(ActorMaterializer m1, ActorRef act){
 
-    }
 
 
 }
