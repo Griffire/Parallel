@@ -11,6 +11,7 @@ import akka.http.javadsl.Http;
 import akka.http.javadsl.ServerBinding;
 import akka.http.javadsl.model.HttpRequest;
 import akka.http.javadsl.model.HttpResponse;
+import akka.japi.Pair;
 import akka.routing.RouterActor;
 import akka.stream.ActorMaterializer;
 import akka.stream.Materializer;
@@ -22,7 +23,7 @@ public class NetworkApp {
 
     static Flow<HttpRequest, HttpResponse, NotUsed> createFlow(ActorMaterializer m1, ActorRef act){
         Flow r;
-        r = Flow.of(HttpRequest.class).map(o -> {new pair(o.getUri().query().getOrElse(url,host), )})
+        r = Flow.of(HttpRequest.class).map(o -> {new Pair<>(o.getUri().query().getOrElse(url,host), )})
     }
 
 
