@@ -16,6 +16,6 @@ public class CashingActor extends AbstractActor {
     public Receive createReceive() {
 //        return null;
         return ReceiveBuilder.create().match(String.class, msg -> sender().tell(cash.getOrDefault(msg,(float)( -1.0) ),
-        ActorRef.noSender())).match(MessageS.class, msg -> cash.put(msg.getAdress(),msg.getTime())).matchAny(o -> )
+        ActorRef.noSender())).match(MessageS.class, msg -> cash.put(msg.getAdress(),msg.getTime())).matchAny(o -> log.info())
     }
 }
