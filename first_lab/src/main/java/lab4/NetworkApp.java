@@ -29,7 +29,8 @@ public class NetworkApp {
         Http http = Http.get(s1);
         ParsingModule PM = new ParsingModule(r1Actor);
         Materializer m1 = Materializer.createMaterializer(s1);
-        Flow<HttpRequest, HttpResponse, NotUsed> r1Flow = PM.newRouter().flow(s1,m1);
+//        Flow<HttpRequest, HttpResponse, NotUsed> r1Flow = PM.newRouter().flow(s1,m1);
+        Flow<HttpRequest, HttpResponse, NotUsed> r1Flow = createFlow(m1, cashingActor);
         CompletionStage<ServerBinding> sBind = http.bindAndHandle(r1Flow, ConnectHttp.toHost("localhost:8888"),m1);
 
 
