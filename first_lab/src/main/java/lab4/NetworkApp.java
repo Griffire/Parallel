@@ -25,7 +25,7 @@ public class NetworkApp {
         Flow r;
         r = Flow.of(HttpRequest.class).map(o -> {
             return new Pair<>(o.getUri().query().getOrElse(url,host),o.getUri().query().getOrElse(COUNT, "1") );
-        }).mapAsync(2, (Pair<String,Integer> pair));
+        }).mapAsync(2, (Pair<String,Integer> pair) -> );
     }
 
 
