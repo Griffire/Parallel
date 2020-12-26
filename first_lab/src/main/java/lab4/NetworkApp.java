@@ -12,6 +12,7 @@ import akka.http.javadsl.ServerBinding;
 import akka.http.javadsl.model.HttpRequest;
 import akka.http.javadsl.model.HttpResponse;
 import akka.routing.RouterActor;
+import akka.stream.ActorMaterializer;
 import akka.stream.Materializer;
 import akka.stream.javadsl.Flow;
 
@@ -39,8 +40,8 @@ public class NetworkApp {
     }
 
 
-    Flow<HttpRequest, HttpResponse, NotUsed> createFlow(){
-        
+    Flow<HttpRequest, HttpResponse, NotUsed> createFlow(ActorMaterializer m1, ActorRef act){
+
     }
 
 
