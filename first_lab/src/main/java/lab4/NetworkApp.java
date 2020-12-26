@@ -22,7 +22,7 @@ public class NetworkApp {
 
     static Flow<HttpRequest, HttpResponse, NotUsed> createFlow(ActorMaterializer m1, ActorRef act){
         Flow r;
-        r =
+        r = Flow.of(HttpRequest.class).
     }
 
 
