@@ -22,7 +22,7 @@ public class NetworkApp {
 
     static Flow<HttpRequest, HttpResponse, NotUsed> createFlow(ActorMaterializer m1, ActorRef act){
         Flow r;
-        r = Flow.of(HttpRequest.class).map(o -> {o.getUri().query().getOrElse(url,host).})
+        r = Flow.of(HttpRequest.class).map(o -> {new pair(o.getUri().query().getOrElse(url,host), )})
     }
 
 
